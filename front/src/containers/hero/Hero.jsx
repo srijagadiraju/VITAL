@@ -1,6 +1,5 @@
-import React from "react";
 import "./hero.css";
-import ai from "../../../assets/ai.png";
+import ai from "../../assets/ai.png";
 
 const Hero = () => {
   return (

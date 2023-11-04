@@ -1,4 +1,3 @@
-import React from "react";
 import "./whatVital.css";
 import { Feature } from "../../components";
 

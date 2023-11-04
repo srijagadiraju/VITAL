@@ -42,6 +42,13 @@
     color: #fff;
 }
 
+.vital__footer-links_logo p a {
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+}
+
 .vital__footer-links_contact {
     display: flex;
     justify-content: flex-start;
