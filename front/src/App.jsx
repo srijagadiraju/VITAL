@@ -1,4 +1,6 @@
 import AppRoutes from "./AppRoutes";
+import { Footer } from "./containers";
+import "./App.css";
 
 export default function App() {
   async function testBack() {
@@ -10,5 +12,10 @@ export default function App() {
 
   testBack();
 
-  return <AppRoutes />;
+  return (
+    <>
+      <AppRoutes />
+      <Footer />
+    </>
+  );
 }
