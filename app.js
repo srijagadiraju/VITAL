@@ -10,6 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import indexRouter from "./routes/index.js";
+import apiAptRouter from "./routes/apiApt.js";
 
 let app = express();
 
@@ -20,5 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "front", "dist")));
 
 app.use("/", indexRouter);
+app.use("/apiApt", apiAptRouter);
 
 export default app;
