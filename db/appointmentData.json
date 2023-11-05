@@ -1,0 +1,140 @@
+[
+    {
+        "Doctor's Name": "Dr. Smith",
+        "Department": "Cardiology",
+        "Visit": "In-Person",
+        "Time of Appointment": "9:00 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Johnson",
+        "Department": "Dermatology",
+        "Visit": "Virtual",
+        "Time of Appointment": "10:30 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Williams",
+        "Department": "Orthopedics",
+        "Visit": "In-Person",
+        "Time of Appointment": "11:45 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Garcia",
+        "Department": "Neurology",
+        "Visit": "In-Person",
+        "Time of Appointment": "8:15 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Lee",
+        "Department": "Pediatrics",
+        "Visit": "Virtual",
+        "Time of Appointment": "9:45 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Patel",
+        "Department": "Ophthalmology",
+        "Visit": "In-Person",
+        "Time of Appointment": "10:00 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Nguyen",
+        "Department": "Gastroenterology",
+        "Visit": "Virtual",
+        "Time of Appointment": "11:30 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Kim",
+        "Department": "Psychiatry",
+        "Visit": "In-Person",
+        "Time of Appointment": "1:15 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Gonzales",
+        "Department": "Endocrinology",
+        "Visit": "Virtual",
+        "Time of Appointment": "2:45 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Murphy",
+        "Department": "Rheumatology",
+        "Visit": "In-Person",
+        "Time of Appointment": "3:00 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Cooper",
+        "Department": "Urology",
+        "Visit": "Virtual",
+        "Time of Appointment": "4:30 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Stewart",
+        "Department": "Hematology",
+        "Visit": "In-Person",
+        "Time of Appointment": "8:45 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Rivera",
+        "Department": "Allergy & Immunology",
+        "Visit": "Virtual",
+        "Time of Appointment": "9:30 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Watson",
+        "Department": "Oncology",
+        "Visit": "In-Person",
+        "Time of Appointment": "10:30 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Adams",
+        "Department": "Pulmonology",
+        "Visit": "Virtual",
+        "Time of Appointment": "11:00 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Campbell",
+        "Department": "Gynecology",
+        "Visit": "In-Person",
+        "Time of Appointment": "1:45 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Carter",
+        "Department": "Dentistry",
+        "Visit": "Virtual",
+        "Time of Appointment": "3:15 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Parker",
+        "Department": "Otolaryngology",
+        "Visit": "In-Person",
+        "Time of Appointment": "4:00 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Mitchell",
+        "Department": "Nephrology",
+        "Visit": "Virtual",
+        "Time of Appointment": "9:00 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Wright",
+        "Department": "Dermatology",
+        "Visit": "In-Person",
+        "Time of Appointment": "11:45 AM"
+    },
+    {
+        "Doctor's Name": "Dr. Cook",
+        "Department": "Neurology",
+        "Visit": "Virtual",
+        "Time of Appointment": "2:30 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Bell",
+        "Department": "Orthopedics",
+        "Visit": "In-Person",
+        "Time of Appointment": "3:30 PM"
+    },
+    {
+        "Doctor's Name": "Dr. Howard",
+        "Department": "Cardiology",
+        "Visit": "Virtual",
+        "Time of Appointment": "10:15 AM"
+    }
+]
