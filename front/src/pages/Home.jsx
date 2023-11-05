@@ -9,7 +9,11 @@ const Home = () => {
         <Hero />
       </div>
       <WhatVital />
-      <CTA />
+      <CTA
+        title="Join us today!"
+        text="Sign up and start exploring your options"
+        btnText="Get started"
+      />
     </div>
   );
 };
