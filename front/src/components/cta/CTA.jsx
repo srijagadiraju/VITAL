@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./cta.css";
 
-const CTA = ({ title, text, btnText }) => {
+export default function CTA({ title, text, btnText }) {
   return (
     <div className="vital__cta section_padding section_margin" id="join">
       <div className="vital__cta-content">
@@ -13,9 +13,9 @@ const CTA = ({ title, text, btnText }) => {
       </div>
     </div>
   );
-};
+}
 
-export default CTA;
+// export default CTA;
 
 CTA.propTypes = {
   title: PropTypes.string.isRequired,
