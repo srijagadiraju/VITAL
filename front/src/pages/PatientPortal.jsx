@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Portal } from "../components";
+import { Navbar, Portal, SearchBar} from "../components";
 
 const PatientPortal = () => {
     return (
