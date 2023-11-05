@@ -4,9 +4,7 @@ import "dotenv/config";
 function MyMongoDB() {
   const myDB = {};
 
-  const uri =
-    process.env.MONGODB_URI ||
-    "mongodb+srv://user:pass@cluster0.5juizef.mongodb.net/";
+  const uri = process.env.MONGODB_URI;
 
   function connect() {
     const client = new MongoClient(uri);
