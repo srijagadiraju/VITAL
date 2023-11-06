@@ -11,7 +11,7 @@ const SearchBar = ({query, setQuery}) => {
 
     return (
       <div>
-        Search <input className="input-control" type="text" onInput={onInput} value={query} /> 
+        Search: <input className="input-control" type="text" onInput={onInput} value={query} /> 
       </div>
     );
   };
