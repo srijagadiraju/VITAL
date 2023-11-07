@@ -101,7 +101,7 @@ async function updateNote(noteId, updatedNote) {
     const db = client.db("usersSharing");
     const result = await db
       .collection("users")
-      .updateOne({ _id: ObjectId(noteId) }, { $set: updatedNote });
+      .updateOne({ _id: new ObjectId(noteId) }, { $set: updatedNote });
     return result;
   } finally {
     client.close();
@@ -115,7 +115,8 @@ async function deleteNote(noteId) {
     const db = client.db("usersSharing");
     const result = await db
       .collection("users")
-      .deleteOne({ _id: ObjectId(noteId) });
+      .deleteOne({ _id: new ObjectId(noteId) });
+    console.log(result);
     return result;
   } finally {
     client.close();

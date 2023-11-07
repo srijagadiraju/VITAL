@@ -155,6 +155,8 @@ router.put("/:id", async (req, res) => {
   const noteId = req.params.id;
   const { content } = req.body;
 
+  console.log("ID received for editing:", noteId);
+
   try {
     const updatedNote = { content };
     const result = await myDB.updateNote(noteId, updatedNote);
@@ -181,6 +183,7 @@ router.delete("/:id", async (req, res) => {
       res.status(200).json({ message: "Note deleted successfully", result });
     } else {
       res.status(404).json({ error: "Note not found" });
+      console.log(req.params.id);
     }
   } catch (err) {
     res.status(500).json({ error: "Error deleting the note" });
