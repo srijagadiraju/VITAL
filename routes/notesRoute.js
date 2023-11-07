@@ -171,11 +171,11 @@ router.put("/:id", async (req, res) => {
 
 // Route to delete a note by ID
 router.delete("/:id", async (req, res) => {
-  const { id } = req.params;
-  console.log("ID received for deletion:", req.params.id);
+  const { id: noteId } = req.params;
+  console.log("ID received for deletion:", noteId);
 
   try {
-    const result = await myDB.deleteNote(id);
+    const result = await myDB.deleteNote(noteId);
 
     if (result) {
       res.status(200).json({ message: "Note deleted successfully", result });

@@ -212,29 +212,48 @@ const Notes = () => {
 //     }
 //   };
 
-const handleDelete = async (usersId) => {
-    console.log("Attempting to delete appointment with ID:", usersId);
+// const handleDelete = async (noteId) => {
+//     console.log("Attempting to delete note with ID:", noteId);
+//     try {
+//         const response = await fetch(`/api/notes/${noteId}`, {
+//             method: "DELETE",
+//             headers: {
+//                 "Content-Type": "application/json",
+//             },
+//         });
+  
+//         if (response.ok) {
+//             const newEntries = entries.filter((entry) => entry._id.toString() !== noteId.toString());
+//             setEntries(newEntries);
+//         } else {
+//             console.error("Failed to delete the note.");
+//         }
+//     } catch (error) {
+//         console.error("There was an error deleting the note:", error);
+//     }
+// };
+
+const handleDelete = async (noteId) => {
+    console.log("Attempting to delete note with ID:", noteId);
+
     try {
-      const response = await fetch(`/api/notes/${usersId}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-  
-      if (response.ok) {
-        // Delete the note from the UI state after successful deletion
-        const newEntries = entries.filter((entry) => entry._id !== usersId);
-        setEntries(newEntries);
-      } else {
-        console.error("Failed to delete the note.");
-      }
+        const response = await fetch(`/api/notes/${String(noteId)}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+
+        if (response.ok) {
+            const newEntries = entries.filter((entry) => entry._id !== noteId);
+            setEntries(newEntries);
+        } else {
+            console.error("Failed to delete the note.");
+        }
     } catch (error) {
-      console.error("There was an error deleting the note:", error);
+        console.error("There was an error deleting the note:", error);
     }
-  };
-  
-  
+};
 
   return (
     <div className="notes-container">

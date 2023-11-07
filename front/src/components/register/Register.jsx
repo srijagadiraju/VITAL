@@ -3,44 +3,33 @@ import { useNavigate } from "react-router-dom";
 import "./register.css";
 
 const Register = () => {
-    const [email, setEmail] = useState("");
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const navigate = useNavigate();
 
-    // const handleSignUp = async (e) => {
-    //     e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    //     const userData = {
-    //         email,
-    //         username,
-    //         password,
-    //     };
+    // check if all fields are filled
+    if (email.trim() === "" || username.trim() === "" || password.trim() === "") {
+      alert("Please fill in all fields to register.");
+    } else {
+      setTimeout(() => {
+        setShowSuccess(true);
 
-    //     try {
-    //         const response = await fetch("/registration/register", {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(userData)
-    //         });
-
-    //         if (response.ok) {
-    //             console.log('User registered successfully!');
-    //             navigate('/join'); // Redirect to the login page
-    //         } else {
-    //             console.error('Failed to register user.');
-    //         }
-    //     } catch (error) {
-    //         console.error('Error registering user:', error);
-    //     }
-    // };
+        setTimeout(() => {
+          navigate("/join");
+        }, 2000);
+      }, 2000);
+    }
+  };
 
   return (
     <div>
       <h1>Register</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -68,12 +57,17 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="button" onClick={() => navigate('/join')}>
-          Sign Up
-        </button>
+        <button type="submit">Sign Up</button>
       </form>
+
+      {showSuccess && (
+        <div className="success-popup">
+          <p>You have registered successfully!</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Register;
+
