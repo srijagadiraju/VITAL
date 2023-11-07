@@ -8,7 +8,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} index />
         <Route path="/join" element={<JoinPage />} />
-        <Route path="/portal/:userId" element={<PatientPortal />} />
+        <Route path="/portal" element={<PatientPortal />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/notes" element={<NotesPage />} />
         <Route path="/apt-confirmation/:aptId" element={<AptConfirmation />} />

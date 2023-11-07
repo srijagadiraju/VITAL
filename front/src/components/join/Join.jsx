@@ -14,7 +14,7 @@ const Join = () => {
     } else {
       setShowSuccess(true);
       setTimeout(() => {
-        navigate("/portal/1");
+        navigate("/portal");
       }, 2000);
     }
   };

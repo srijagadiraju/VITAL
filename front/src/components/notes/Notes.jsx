@@ -191,69 +191,113 @@ const Notes = () => {
   //       setEntries(newEntries);
   //     }
   //   };
-//   const handleDelete = async (usersId) => {
-//     console.log("Attempting to delete appointment with ID:", usersId);
-//     try {
-//       const response = await fetch(`/api/notes/${usersId}`, {
-//         method: "DELETE",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       });
-  
-//       if (response.ok) {
-//         const newEntries = entries.filter((entry) => entry._id !== usersId);
-//         setEntries(newEntries);
-//       } else {
-//         console.error("Failed to delete the appointment.");
-//       }
-//     } catch (error) {
-//       console.error("There was an error deleting the appointment:", error);
-//     }
-//   };
+  //   const handleDelete = async (usersId) => {
+  //     console.log("Attempting to delete appointment with ID:", usersId);
+  //     try {
+  //       const response = await fetch(`/api/notes/${usersId}`, {
+  //         method: "DELETE",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       });
 
-// const handleDelete = async (noteId) => {
-//     console.log("Attempting to delete note with ID:", noteId);
-//     try {
-//         const response = await fetch(`/api/notes/${noteId}`, {
-//             method: "DELETE",
-//             headers: {
-//                 "Content-Type": "application/json",
-//             },
-//         });
-  
-//         if (response.ok) {
-//             const newEntries = entries.filter((entry) => entry._id.toString() !== noteId.toString());
-//             setEntries(newEntries);
-//         } else {
-//             console.error("Failed to delete the note.");
-//         }
-//     } catch (error) {
-//         console.error("There was an error deleting the note:", error);
-//     }
-// };
+  //       if (response.ok) {
+  //         const newEntries = entries.filter((entry) => entry._id !== usersId);
+  //         setEntries(newEntries);
+  //       } else {
+  //         console.error("Failed to delete the appointment.");
+  //       }
+  //     } catch (error) {
+  //       console.error("There was an error deleting the appointment:", error);
+  //     }
+  //   };
 
-const handleDelete = async (noteId) => {
+  // const handleDelete = async (noteId) => {
+  //     console.log("Attempting to delete note with ID:", noteId);
+  //     try {
+  //         const response = await fetch(`/api/notes/${noteId}`, {
+  //             method: "DELETE",
+  //             headers: {
+  //                 "Content-Type": "application/json",
+  //             },
+  //         });
+
+  //         if (response.ok) {
+  //             const newEntries = entries.filter((entry) => entry._id.toString() !== noteId.toString());
+  //             setEntries(newEntries);
+  //         } else {
+  //             console.error("Failed to delete the note.");
+  //         }
+  //     } catch (error) {
+  //         console.error("There was an error deleting the note:", error);
+  //     }
+  // };
+
+  // const handleDelete = async (noteId) => {
+  //     console.log("Attempting to delete note with ID:", noteId);
+
+  //     try {
+  //         const response = await fetch(`/api/notes/${String(noteId)}`, {
+  //             method: "DELETE",
+  //             headers: {
+  //                 "Content-Type": "application/json",
+  //             },
+  //         });
+
+  //         if (response.ok) {
+  //             const newEntries = entries.filter((entry) => entry._id !== noteId);
+  //             setEntries(newEntries);
+  //         } else {
+  //             console.error("Failed to delete the note.");
+  //         }
+  //     } catch (error) {
+  //         console.error("There was an error deleting the note:", error);
+  //     }
+  // };
+
+  // const handleDelete = async (noteId) => {
+  //     console.log("Attempting to delete note with ID:", noteId);
+  //     try {
+  //       const response = await fetch(`/api/notes/${noteId}`, {
+  //         method: "DELETE",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       });
+
+  //       if (response.ok) {
+  //         const newEntries = entries.filter((entry) => entry._id !== noteId);
+  //         setEntries(newEntries);
+  //       } else {
+  //         console.error("Failed to delete the note.");
+  //       }
+  //     } catch (error) {
+  //       console.error("There was an error deleting the note:", error);
+  //     }
+  //   };
+
+  const handleDelete = async (noteId) => {
     console.log("Attempting to delete note with ID:", noteId);
-
     try {
-        const response = await fetch(`/api/notes/${String(noteId)}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
+      const response = await fetch(`/api/notes/${noteId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-        if (response.ok) {
-            const newEntries = entries.filter((entry) => entry._id !== noteId);
-            setEntries(newEntries);
-        } else {
-            console.error("Failed to delete the note.");
-        }
+      if (response.ok) {
+        const newEntries = entries.filter(
+          (entry) => entry._id.toString() !== noteId.toString()
+        );
+        setEntries(newEntries);
+      } else {
+        console.error("Failed to delete the note.");
+      }
     } catch (error) {
-        console.error("There was an error deleting the note:", error);
+      console.error("There was an error deleting the note:", error);
     }
-};
+  };
 
   return (
     <div className="notes-container">
@@ -274,8 +318,14 @@ const handleDelete = async (noteId) => {
               <div key={`pending-${index}`} className="note-item">
                 <p>{pendingItem}</p>
                 <div className="buttons">
-                  <button onClick={() => handleEdit(index)}>Edit</button>
-                  <button onClick={() => handleDelete(index)}>Delete</button>
+                  {/* <button onClick={() => handleEdit(index)}>Edit</button>
+                  <button onClick={() => handleDelete(index)}>Delete</button> */}
+                  <button onClick={() => handleEdit(pendingItem._id)}>
+                    Edit
+                  </button>
+                  <button onClick={() => handleDelete(pendingItem._id)}>
+                    Delete
+                  </button>
                 </div>
               </div>
             ))}

@@ -187,4 +187,6 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// add route to grab content by id to edit and delete specific elements
+
 export default router;
