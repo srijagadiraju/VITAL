@@ -6,3 +6,4 @@ export { default as Portal } from "./portal/Portal";
 export { default as SearchBar } from "./searchbar/SearchBar";
 export { default as Register } from "./register/Register";
 export { default as Notes } from "./notes/Notes";
+export { default as EditMessageModal } from "./editMessageModal/EditMessageModal";

@@ -1,21 +1,8 @@
 import "./confirmed.css";
 import { Feature } from "../../components";
+import PropTypes from "prop-types";
 
-const Confirmed = () => {
-  const appointment = {
-    id: 1,
-    userName: "bob",
-    userid: 23,
-    aptChosen: {
-      "Doctor's Name": "Dr. Smith",
-      Department: "Cardiology",
-      Visit: "In-person",
-      "Time of Appointment": "9:00 AM",
-    },
-    message: "I am feeling this type of pain ...",
-    messaged: false,
-  };
-
+const Confirmed = ({ appointment }) => {
   return (
     <div className="vital__apt section__margin" id="howItWorks">
       <div className="vital__apt-heading">
@@ -23,17 +10,14 @@ const Confirmed = () => {
         <p>Review the details</p>
       </div>
       <div className="vital__apt-container">
-        <Feature
-          title="Meeting with"
-          text={appointment.aptChosen["Doctor's Name"]}
-        />
+        <Feature title="Meeting with" text={appointment.aptChosen.Doctor} />
         <Feature title="Department" text={appointment.aptChosen.Department} />
         <Feature title="Visit type" text={appointment.aptChosen.Visit} />
       </div>
       <div className="vital__apt-container">
         <Feature
           title="Time of Appointment"
-          text={appointment.aptChosen["Time of Appointment"]}
+          text={appointment.aptChosen.Time}
         />
         <Feature title="Message to the Doctor" text={appointment.message} />
         <Feature
@@ -46,3 +30,16 @@ const Confirmed = () => {
 };
 
 export default Confirmed;
+
+Confirmed.propTypes = {
+  appointment: PropTypes.shape({
+    aptChosen: PropTypes.shape({
+      Doctor: PropTypes.string.isRequired,
+      Department: PropTypes.string.isRequired,
+      Visit: PropTypes.string.isRequired,
+      Time: PropTypes.string.isRequired,
+    }).isRequired,
+    message: PropTypes.string.isRequired,
+    messaged: PropTypes.bool.isRequired,
+  }).isRequired,
+};

@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, "front", "dist")));
 //app.use(passport.session());
 
 app.use("/", indexRouter);
-app.use("/apiApt", apiAptRouter);
+app.use("/api/apt", apiAptRouter);
 app.use("/api/notes", notesRouter);
 
 export default app;
