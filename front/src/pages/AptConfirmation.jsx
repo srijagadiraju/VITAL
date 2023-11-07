@@ -34,7 +34,7 @@ const AptConfirmation = () => {
     if (response.ok) {
       // Redirect to portal page upon successful deletion
       alert("Your appointment has been deleted.");
-      window.location.href = "/portal/1";
+      window.location.href = "/portal";
     } else {
       // Handle the error, maybe show a message to the user
       alert("Failed to delete appointment.");
