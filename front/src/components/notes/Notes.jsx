@@ -196,17 +196,19 @@ const Notes = () => {
     try {
       const response = await fetch(`/api/notes/${noteId}`, {
         method: "DELETE",
-        // headers: {
-        //   "Content-Type": "application/json",
-        // },
       });
 
       if (response.ok) {
         alert("Your appointment has been deleted.");
-        const newEntries = entries.filter(
-          (entry) => entry._id !== noteId
-        );
+        // Fixing the filter condition to match the correct property
+        const newEntries = entries.filter((entry) => entry.id !== noteId);
         setEntries(newEntries);
+
+        // Also update the pendingEntries if necessary
+        const newPendingEntries = pendingEntries.filter(
+          (entry) => entry.id !== noteId
+        );
+        setPendingEntries(newPendingEntries);
       } else {
         console.error("Failed to delete the note.");
       }
@@ -215,10 +217,10 @@ const Notes = () => {
     }
   };
 
-// need it to get the document from database rather than pending Item
-// whatever is types is becoming a new object - want it to collect the specific element from the database
-// buttons -- pendingItem.id
-// .map takes in pendingItem.content
+  // need it to get the document from database rather than pending Item
+  // whatever is types is becoming a new object - want it to collect the specific element from the database
+  // buttons -- pendingItem.id
+  // .map takes in pendingItem.content
   return (
     <div className="notes-container">
       <h2>Appointment Notes</h2>
@@ -238,8 +240,12 @@ const Notes = () => {
               <div key={`pending-${index}`} className="note-item">
                 <p>{pendingItem.content}</p>
                 <div className="buttons">
-                  <button onClick={() => handleEdit(pendingItem.id)}>Edit</button>
-                  <button onClick={() => handleDelete(pendingItem.id)}>Delete</button>
+                  <button onClick={() => handleEdit(pendingItem.id)}>
+                    Edit
+                  </button>
+                  <button onClick={() => handleDelete(pendingItem.id)}>
+                    Delete
+                  </button>
                 </div>
               </div>
             ))}
