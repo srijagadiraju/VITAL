@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, JoinPage, PatientPortal, AptConfirmation } from "./pages/index";
+import { Home, JoinPage, PatientPortal, AptConfirmation, NotesPage } from "./pages/index";
 import RegisterPage from "./pages/RegisterPage";
 
 const AppRoutes = () => {
@@ -10,6 +10,7 @@ const AppRoutes = () => {
         <Route path="/join" element={<JoinPage />} />
         <Route path="/portal/:userId" element={<PatientPortal />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/notes" element={<NotesPage />} />
         <Route path="/apt-confirmation/:aptId" element={<AptConfirmation />} />
       </Routes>
     </Router>

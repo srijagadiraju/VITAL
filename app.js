@@ -5,17 +5,13 @@ import logger from "morgan";
 
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import bodyParser from "body-parser";
-import session from "express-session";
-import passport from "passport";
-//import { Strategy as LocalStrategy } from "passport-local";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import indexRouter from "./routes/index.js";
 import apiAptRouter from "./routes/apiApt.js";
-import registrationRouter from "./routes/registration.js";
+import notesRouter from "./routes/notesRoute.js";
 
 let app = express();
 
@@ -25,19 +21,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "front", "dist")));
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(
-  session({
-    secret: "health",
-    cookie: { secure: false },
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.json());
+// app.use(
+//   session({
+//     secret: "health",
+//     cookie: { secure: false },
+//   })
+// );
+//app.use(passport.initialize());
+//app.use(passport.session());
 
 app.use("/", indexRouter);
 app.use("/apiApt", apiAptRouter);
-app.use("/registration", registrationRouter);
+app.use("/api/notes", notesRouter);
 
 export default app;

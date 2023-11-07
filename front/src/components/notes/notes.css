@@ -1,0 +1,37 @@
+/* Notes.css */
+.notes-container {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .notes-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .entries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .note-item {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; /* Set the text color to black */
+  }
+  
+  .buttons button {
+    margin-left: 10px;
+  }
+  
