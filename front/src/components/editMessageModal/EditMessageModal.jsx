@@ -8,6 +8,7 @@ const EditMessageModal = ({ isOpen, onClose, onSubmit, initialMessage }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     onSubmit(message);
   };
 
