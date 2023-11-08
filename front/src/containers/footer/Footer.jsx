@@ -1,5 +1,5 @@
 import "./footer.css";
-import vital from "../../assets/vital2.svg";
+import vital from "../../assets/vital.svg";
 
 const Footer = () => {
   return (

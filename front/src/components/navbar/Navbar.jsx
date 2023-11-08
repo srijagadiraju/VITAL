@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import "./navbar.css";
-import logo from "../../assets/vital2.svg";
+import logo from "../../assets/vital.svg";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
