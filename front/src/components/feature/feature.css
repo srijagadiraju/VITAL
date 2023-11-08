@@ -10,11 +10,12 @@
 
 .vital__features-container__feature-title {
   flex: 1;
-  max-width: 180px;
+  max-width: 280px;
   margin-right: 2rem;
 }
 
 .vital__features-container__feature-title h4 {
+  display: flex;
   font-family: var(--font-family);
   font-weight: 800;
   font-size: 18px;
@@ -38,6 +39,7 @@
 }
 
 .vital__features-container__feature-text p {
+  align-items: flex-start;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;

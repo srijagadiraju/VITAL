@@ -82,6 +82,7 @@
 }
 
 .vital__apt-container .vital__features-container__feature {
+  display: flex;
   flex: 1;
   margin: 1rem;
   min-width: 210px;
