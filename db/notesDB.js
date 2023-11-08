@@ -32,20 +32,6 @@ async function getNotes(query = {}) {
   }
 }
 
-// async function getNoteById(noteId) {
-//   const client = await connect();
-
-//   try {
-//     const db = client.db("usersSharing");
-//     const note = await db
-//       .collection("users")
-//       .findOne({ _id: ObjectId(noteId) });
-//     return note;
-//   } finally {
-//     client.close();
-//   }
-// }
-
 async function getNoteById(noteId) {
   let client;
   try {

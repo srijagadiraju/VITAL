@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
         newEntry.id = newNote.result.insertedId;
         console.log(newEntry);
 
-        setPendingEntries([...pendingEntries, newEntry]); // one with text and other with object id -- because no way of knowing what the object id is
+        setPendingEntries([...pendingEntries, newEntry]); 
 
         console.log(entry);
         setEntries([...entries, newNote.result.insertedId]);
@@ -82,33 +82,6 @@ const handleSubmit = async (e) => {
     setPendingEntries(newPendingEntries);
   };
 
-  // const handleDelete = async (noteId) => {
-  //   console.log("Attempting to delete note with ID:", noteId);
-  //   try {
-  //     const response = await fetch(`/api/notes/${noteId}`, {
-  //       method: "DELETE",
-  //     });
-
-  //     if (response.ok) {
-  //       alert("Your appointment has been deleted.");
-  //       const newEntries = entries.filter((entry) => entry.id !== noteId);
-  //       setEntries(newEntries);
-
-  //       const newEntries = entries.filter((entry) => entry.id !== noteId);
-  //       setEntries(newEntries);
-
-  //       const newPendingEntries = pendingEntries.filter(
-  //         (entry) => entry.id !== noteId
-  //       );
-  //       setPendingEntries(newPendingEntries);
-  //     } else {
-  //       console.error("Failed to delete the note.");
-  //     }
-  //   } catch (error) {
-  //     console.error("There was an error deleting the note:", error);
-  //   }
-  // };
-
   const handleDelete = async (noteId) => {
     console.log("Attempting to delete note with ID:", noteId);
     try {
@@ -121,7 +94,6 @@ const handleSubmit = async (e) => {
         const updatedEntries = entries.filter((entry) => entry.id !== noteId);
         setEntries(updatedEntries);
   
-        // Also update the pendingEntries if necessary
         const updatedPendingEntries = pendingEntries.filter(
           (entry) => entry.id !== noteId
         );
