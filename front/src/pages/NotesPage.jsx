@@ -1,9 +1,9 @@
-import { Navbar, Notes } from "../components";
+import { LoginNav, Notes } from "../components";
 
 const NotesPage = () => {
   return (
     <div>
-      <Navbar />
+      <LoginNav />
       <Notes />
     </div>
   );

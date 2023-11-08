@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Confirmed from "../containers/confirmed/Confirmed";
-import { Navbar, CTA, EditMessageModal } from "../components";
+import { LoginNav, CTA, EditMessageModal } from "../components";
 import { useParams } from "react-router-dom";
 
 const AptConfirmation = () => {
@@ -44,7 +44,7 @@ const AptConfirmation = () => {
   return (
     <div className="App">
       <div className="gradient__bg">
-        <Navbar />
+        <LoginNav />
         <Confirmed appointment={appointment} />
       </div>
 

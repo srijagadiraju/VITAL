@@ -1,6 +1,11 @@
 /* Notes.css */
 .notes-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 65vh; 
+    justify-content: flex-start; 
     text-align: center;
+    padding-bottom: 50px; 
   }
   
   h2 {
@@ -28,10 +33,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black; /* Set the text color to black */
+    color: black; 
   }
   
   .buttons button {
     margin-left: 10px;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
   }
   

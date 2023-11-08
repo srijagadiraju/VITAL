@@ -1,10 +1,10 @@
 import React from "react";
-import { Navbar, Portal, SearchBar} from "../components";
+import { LoginNav, Portal, SearchBar} from "../components";
 
 const PatientPortal = () => {
     return (
         <div>
-            <Navbar /> 
+            <LoginNav /> 
             <Portal />
         </div>
     );
