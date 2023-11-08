@@ -10,31 +10,37 @@
     background-color: var(--gradient-bar); 
     background-color: rgba(0,0,0,0.4); 
     font-family: var(--font-family);
+    font-family: var(--font-family);
   }
   
+  
   .modal-content {
-    display: flex;
+    background: var(--gradient-bar);
     position: relative;
     background-color: #fefefe;
     margin: 10% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 50%; 
-    background: var(--gradient-bar);
+  }
+
+  .modal-content form textarea {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 10% auto; 
+    padding: 40px;
+    width: 75%;
+    border-radius: 5px; 
   }
   
   
   .show-modal {
     display: block; 
-  }
-
-  .modal-content form textarea {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
-    border-radius: 5px;
-    margin: 10% auto; 
-    padding: 20px;
-    font-family: var(--font-family);
   }
   
   .close-button {
