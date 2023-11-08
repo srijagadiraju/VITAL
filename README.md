@@ -6,14 +6,13 @@ Created by Srija Gadiraju & Senay Tilahun
 
 Design Document: [here](https://docs.google.com/document/d/1WbJf9y3eyiVDzyMLi3fp7mMP7u2sID_RajBZ9RVvzyk/edit?usp=sharing)
 
-Slides: [here](https://docs.google.com/presentation/d/159Q970wUppgrnvJBeWqMwolbRyurYfYSv0ajo7fmWYc/edit?usp=sharing) 
+Slides: [here](https://docs.google.com/presentation/d/159Q970wUppgrnvJBeWqMwolbRyurYfYSv0ajo7fmWYc/edit?usp=sharing)
 
 ## Demo
 
 Walkthrough Video: coming soon
 
 Website Link: coming soon
-
 
 ## Screenshots
 
@@ -116,7 +115,7 @@ To install these dependencies, you can run the command above once you've cloned 
 
 ## Configuration
 
-There are no specific configuration requirements for CafeConnect. The project is designed to be straightforward to set up and use.
+There are no specific configuration requirements for Vital. The project is designed to be straightforward to set up and use.
 
 ## License
 
