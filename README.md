@@ -91,7 +91,7 @@ To install these dependencies, you can run the command above once you've cloned 
 ```
 - Vital offers the following features:
 
-- Register/Login Page: Sign in to be directed to appointment portal page. 
+- Register/Login Page: Sign in to be directed to appointment portal page.
 
 - Filter: Use filter on appointment portal page to narrow down search to specific department, time, date, or doctor.
 
