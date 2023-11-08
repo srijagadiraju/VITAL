@@ -20,11 +20,15 @@ Website Link: coming soon
 
 <img width="800" alt="how it works screenshot" src="./front/src/assets/hiw.png">
 
+<img width="800" alt="Register page screenshot" src="./front/src/assets/register.png">
+
 <img width="800" alt="Login page screenshot" src="./front/src/assets/login.png">
 
 <img width="800" alt="Patient portal page screenshot" src="./front/src/assets/potal.png">
 
 <img width="800" alt="Apt confirmation page screenshot" src="./front/src/assets/confirm.png">
+
+<img width="800" alt="Notes page screenshot" src="./front/src/assets/notes.png">
 
 ## Class reference
 
