@@ -4,7 +4,7 @@ VITAL is a hospital appointment scheduler for patients to be able to book appoin
 
 Created by Srija Gadiraju & Senay Tilahun
 
-Design Document: [here](./design-document.md)
+Design Document: [here]([./design-document.md](https://docs.google.com/document/d/1WbJf9y3eyiVDzyMLi3fp7mMP7u2sID_RajBZ9RVvzyk/edit?usp=sharing))
 
 Slides: 
 
