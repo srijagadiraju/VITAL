@@ -26,3 +26,7 @@ app.use("/api/apt", apiAptRouter);
 app.use("/api/notes", notesRouter);
 
 export default app;
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/front/dist/index.html"));
+});
