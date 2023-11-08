@@ -4,9 +4,16 @@ VITAL is a hospital appointment scheduler for patients to be able to book appoin
 
 Created by Srija Gadiraju & Senay Tilahun
 
-Video demo : coming soon
+Design Document: [here](./design-document.md)
 
-The design document is available at [here](./design-document.md)
+Slides: 
+
+## Demo
+
+Walkthrough Video: coming soon
+
+Website Link: coming soon
+
 
 ## Screenshots
 
@@ -20,16 +27,9 @@ The design document is available at [here](./design-document.md)
 
 <img width="800" alt="Apt confirmation page screenshot" src="./front/src/assets/confirm.png">
 
-### Class reference
+## Class reference
 
 Link: https://johnguerra.co/classes/webDevelopment_fall_2023/
-
-## Demo
-
-Authors:
-Huiqin Hu && Senay Tilahun
-
-You can visit the live website here: coming soon
 
 ## Installation
 
@@ -88,17 +88,15 @@ To install these dependencies, you can run the command above once you've cloned 
 ```
 - Vital offers the following features:
 
-- Homepage: Understand what Vital is Your starting point to the seamless connection between you and your healthcare specialists. Our dedicated system empowers you to schedule, manage, and prepare for your appointments with ease, ensuring personalized care at every step.
+- Restaurant Display: Explore a list of admin-approved featured restaurants, with information about their amenities and locations.
 
-- Register: from the homepage you can register to use the website.
+- Filter: Use filters to narrow down your restaurant options based on whether they have wifi, restrooms, or power outlets.
 
-- Login: If you already have an account, you can login to see your appointments/notes or schedule new appointment.
+- Create New Restaurant: If you don't see a specific restaurant in our list, you can contribute by adding a new one. Your input will be stored in our PendingRestaurants database and reviewed by our admin team.
 
-- Patient Portal: You can see all the different appointements available and choose the best one.
+- Update Restaurant: You can update key information about existing restaurants, such as whether they have wifi, restrooms, or power outlets.
 
-- Appointment Confirmation page: once you select your appointment you will be redirected to the confirmation page, where you will be able to view the details, send a message to your doctor prior to your visit and also delete appointments.
-
-- Notes: you can keep a record of the notes you have take form your doctor, you can add, update, delete your notes.
+- User Messages: If you have concerns or feedback, you can use our user message form to contact us. Enter your name, email, and your message, and we'll get back to you promptly.
 ```
 
 ## Features
