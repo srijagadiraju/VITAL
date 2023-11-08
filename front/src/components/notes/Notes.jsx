@@ -91,8 +91,16 @@ const handleSubmit = async (e) => {
 
       if (response.ok) {
         alert("Your appointment has been deleted.");
+<<<<<<< HEAD
         const newEntries = entries.filter((entry) => entry.id !== noteId);
         setEntries(newEntries);
+=======
+        // Fixing the filter condition to match the correct property
+        const newEntries = entries.filter((entry) => entry.id !== noteId);
+        setEntries(newEntries);
+
+        // Also update the pendingEntries if necessary
+>>>>>>> d724bd3e6689a612b4e655ce57a3b2b89764265b
         const newPendingEntries = pendingEntries.filter(
           (entry) => entry.id !== noteId
         );
@@ -105,7 +113,15 @@ const handleSubmit = async (e) => {
     }
   };
 
+<<<<<<< HEAD
 return (
+=======
+  // need it to get the document from database rather than pending Item
+  // whatever is types is becoming a new object - want it to collect the specific element from the database
+  // buttons -- pendingItem.id
+  // .map takes in pendingItem.content
+  return (
+>>>>>>> d724bd3e6689a612b4e655ce57a3b2b89764265b
     <div className="notes-container">
       <h2>Appointment Notes</h2>
       <div className="notes-box">
