@@ -1,28 +1,38 @@
+import { useNavigate } from "react-router-dom";
 import "./hero.css";
-import ai from "../../assets/ai.png";
+import health from "../../assets/health.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const navigateToRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="vital__hero section__padding" id="hero">
       <div className="vital__hero-content">
         <h1 className="gradient__text">
-          Let’s Build Something amazing with GPT-3 OpenAI
+          Your Health, Our Priority - Effortlessly Book Your Doctor
+          Appointments!
         </h1>
 
         <p>
-          Yet bed any for travelling assistance indulgence unpleasing. Not
-          thoughts all exercise blessing. Indulgence way everything joy
-          alteration boisterous the attachment. Party we years to order allow
-          asked of.
+          Welcome to VITAL – the seamless connection between you and your
+          healthcare specialists. Our dedicated system empowers you to schedule,
+          manage, and prepare for your appointments with ease, ensuring
+          personalized care at every step.
         </p>
 
         <div className="vital__hero-content__input">
           <input type="email" placeholder="Your Email Address" />
-          <button type="button">Get Started</button>
+          <button type="button" onClick={navigateToRegister}>
+            Get Started
+          </button>
         </div>
       </div>
       <div className="vital__hero-image">
-        <img src={ai} alt="hero image" />
+        <img src={health} alt="hero image" />
       </div>
     </div>
   );

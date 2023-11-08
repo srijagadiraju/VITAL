@@ -1,20 +1,38 @@
 import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import "./navbar.css";
-import logo from "../../assets/logo.svg";
+import vital from "../../assets/vital.png";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const navigate = useNavigate();
+
+  const navigateToRegister = () => {
+    navigate("/register");
+  };
+
+  const navigateToJoin = () => {
+    navigate("/join");
+  };
 
   return (
     <div className="vital__navbar">
       <div className="vital__navbar-links">
         <div className="vital__navbar-links_logo">
-          <img src={logo} alt="vital logo" />
+          <img src={vital} alt="vital logo" />
         </div>
         <div className="vital__navbar-links_container">
           <p>
-            <a href="#home">Home</a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/");
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              Home
+            </a>
           </p>
           <p>
             <a href="#howItWorks">How it works</a>
@@ -25,8 +43,20 @@ const Navbar = () => {
         </div>
       </div>
       <div className="vital__navbar-sign">
-        <p>Sign in</p>
-        <button type="button">Sign up</button>
+        <p>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/join");
+            }}
+            style={{ cursor: "pointer" }}
+          >
+            Sign In
+          </a>
+        </p>
+        <button type="button" onClick={navigateToRegister}>
+          Sign up
+        </button>
       </div>
       <div className="vital__navbar-menu">
         {openMenu ? (
@@ -56,7 +86,9 @@ const Navbar = () => {
               </p>
             </div>
             <div className="vital__navbar-menu_container-links-sign">
-              <p>Sign in</p>
+              <a href="#" onClick={navigateToJoin}>
+                Sign In
+              </a>
               <button type="button">Sign up</button>
             </div>
           </div>

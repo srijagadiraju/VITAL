@@ -1,12 +1,12 @@
 import "./footer.css";
-import logo from "../../assets/logo.svg";
+import vital from "../../assets/vital.png";
 
 const Footer = () => {
   return (
     <div className="vital__footer section__padding">
       <div className="vital__footer-links">
         <div className="vital__footer-links_logo">
-          <img src={logo} alt="vital logo" />
+          <img src={vital} alt="vital logo" />
         </div>
         <div className="vital__footer-links_contact">
           <h4>Socials</h4>

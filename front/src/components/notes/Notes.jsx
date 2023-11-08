@@ -23,7 +23,7 @@ const Notes = () => {
     setEntry(e.target.value);
   };
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (editing) {
       const response = await fetch(`/api/notes/${editIndex}`, {
@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
         newEntry.id = newNote.result.insertedId;
         console.log(newEntry);
 
-        setPendingEntries([...pendingEntries, newEntry]); 
+        setPendingEntries([...pendingEntries, newEntry]);
 
         console.log(entry);
         setEntries([...entries, newNote.result.insertedId]);
@@ -78,7 +78,9 @@ const handleSubmit = async (e) => {
     setEditing(true);
     setEntry(entries.find((entry) => entry.id === index)?.content || "");
 
-    const newPendingEntries = pendingEntries.filter((entry) => entry.id !== index);
+    const newPendingEntries = pendingEntries.filter(
+      (entry) => entry.id !== index
+    );
     setPendingEntries(newPendingEntries);
   };
 
@@ -88,12 +90,12 @@ const handleSubmit = async (e) => {
       const response = await fetch(`/api/notes/${noteId}`, {
         method: "DELETE",
       });
-  
+
       if (response.ok) {
         alert("Your appointment has been deleted.");
         const updatedEntries = entries.filter((entry) => entry.id !== noteId);
         setEntries(updatedEntries);
-  
+
         const updatedPendingEntries = pendingEntries.filter(
           (entry) => entry.id !== noteId
         );
@@ -105,7 +107,7 @@ const handleSubmit = async (e) => {
       console.error("There was an error deleting the note:", error);
     }
   };
-  
+
   return (
     <div className="notes-container">
       <h2>Appointment Notes</h2>
