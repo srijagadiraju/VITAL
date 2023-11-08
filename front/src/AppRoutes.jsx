@@ -1,5 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, JoinPage, PatientPortal, AptConfirmation, NotesPage } from "./pages/index";
+import {
+  Home,
+  JoinPage,
+  PatientPortal,
+  AptConfirmation,
+  NotesPage,
+} from "./pages/index";
 import RegisterPage from "./pages/RegisterPage";
 
 const AppRoutes = () => {

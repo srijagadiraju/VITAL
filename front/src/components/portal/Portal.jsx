@@ -35,7 +35,7 @@ const Portal = () => {
   const indexOfFirstAppointment = indexOfLastAppointment - appointmentsPerPage;
   const currentAppointments = appointmentsData.slice(
     indexOfFirstAppointment,
-    indexOfLastAppointment
+    indexOfLastAppointment,
   );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -95,7 +95,7 @@ const Portal = () => {
       navigate(`/apt-confirmation/${createdAppointment.aptId}`);
     } else {
       setError(
-        "Failed to navigate to appoitment confirmation. Please try again."
+        "Failed to navigate to appoitment confirmation. Please try again.",
       );
     }
   };
@@ -161,7 +161,7 @@ Portal.propTypes = {
       department: PropTypes.string.isRequired,
       visit: PropTypes.string.isRequired,
       time: PropTypes.string.isRequired,
-    })
+    }),
   ),
 };
 

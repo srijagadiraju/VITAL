@@ -28,7 +28,7 @@ router.put("/update-apt/:id", async (req, res) => {
   try {
     const updatedAppointment = await myDB.updateAppointmentMessage(
       appointmentId,
-      message
+      message,
     );
     if (updatedAppointment) {
       res.json(updatedAppointment);

@@ -13,7 +13,11 @@ const Register = () => {
     e.preventDefault();
 
     // check if all fields are filled
-    if (email.trim() === "" || username.trim() === "" || password.trim() === "") {
+    if (
+      email.trim() === "" ||
+      username.trim() === "" ||
+      password.trim() === ""
+    ) {
       alert("Please fill in all fields to register.");
     } else {
       setTimeout(() => {
@@ -70,4 +74,3 @@ const Register = () => {
 };
 
 export default Register;
-

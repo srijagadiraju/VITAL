@@ -36,7 +36,7 @@ const Notes = () => {
 
       if (response.ok) {
         const updatedEntries = entries.map((item) =>
-          item.id === editIndex ? { ...item, content: entry } : item
+          item.id === editIndex ? { ...item, content: entry } : item,
         );
 
         setEntries(updatedEntries);
@@ -79,7 +79,7 @@ const Notes = () => {
     setEntry(entries.find((entry) => entry.id === index)?.content || "");
 
     const newPendingEntries = pendingEntries.filter(
-      (entry) => entry.id !== index
+      (entry) => entry.id !== index,
     );
     setPendingEntries(newPendingEntries);
   };
@@ -97,7 +97,7 @@ const Notes = () => {
         setEntries(updatedEntries);
 
         const updatedPendingEntries = pendingEntries.filter(
-          (entry) => entry.id !== noteId
+          (entry) => entry.id !== noteId,
         );
         setPendingEntries(updatedPendingEntries);
       } else {

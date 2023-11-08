@@ -1,13 +1,13 @@
 import React from "react";
-import { LoginNav, Portal, SearchBar} from "../components";
+import { LoginNav, Portal, SearchBar } from "../components";
 
 const PatientPortal = () => {
-    return (
-        <div>
-            <LoginNav /> 
-            <Portal />
-        </div>
-    );
-}
+  return (
+    <div>
+      <LoginNav />
+      <Portal />
+    </div>
+  );
+};
 
 export default PatientPortal;
