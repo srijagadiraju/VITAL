@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import "./navbar.css";
-import vital from "../../assets/vital.png";
+import logo from "../../assets/vital2.svg";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className="vital__navbar">
       <div className="vital__navbar-links">
         <div className="vital__navbar-links_logo">
-          <img src={vital} alt="vital logo" />
+          <img src={logo} alt="vital logo" />
         </div>
         <div className="vital__navbar-links_container">
           <p>
