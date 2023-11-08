@@ -5,6 +5,7 @@ import logger from "morgan";
 
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import { createServer } from "http";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -14,6 +15,7 @@ import apiAptRouter from "./routes/apiApt.js";
 import notesRouter from "./routes/notesRoute.js";
 
 let app = express();
+const httpServer = createServer(app);
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -21,19 +23,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "front", "dist")));
 
-//app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.json());
-// app.use(
-//   session({
-//     secret: "health",
-//     cookie: { secure: false },
-//   })
-// );
-//app.use(passport.initialize());
-//app.use(passport.session());
-
 app.use("/", indexRouter);
 app.use("/api/apt", apiAptRouter);
 app.use("/api/notes", notesRouter);
 
+httpServer.listen(5174);
 export default app;
