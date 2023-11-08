@@ -12,7 +12,7 @@ Slides: [here](https://docs.google.com/presentation/d/159Q970wUppgrnvJBeWqMwolbR
 
 Walkthrough Video: [here](https://youtu.be/_JvaXSXABQ4)
 
-Website Link: coming soon
+Website Link: [here](https://vital-stqk.onrender.com)
 
 ## Screenshots
 
