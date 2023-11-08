@@ -10,7 +10,7 @@ Slides: [here](https://docs.google.com/presentation/d/159Q970wUppgrnvJBeWqMwolbR
 
 ## Demo
 
-Walkthrough Video: coming soon
+Walkthrough Video: [here](https://youtu.be/_JvaXSXABQ4)
 
 Website Link: coming soon
 
@@ -91,31 +91,29 @@ To install these dependencies, you can run the command above once you've cloned 
 ```
 - Vital offers the following features:
 
-- Restaurant Display: Explore a list of admin-approved featured restaurants, with information about their amenities and locations.
+- Register/Login Page: Sign in to be directed to appointment portal page. 
 
-- Filter: Use filters to narrow down your restaurant options based on whether they have wifi, restrooms, or power outlets.
+- Filter: Use filter on appointment portal page to narrow down search to specific department, time, date, or doctor.
 
-- Create New Restaurant: If you don't see a specific restaurant in our list, you can contribute by adding a new one. Your input will be stored in our PendingRestaurants database and reviewed by our admin team.
+- Send A Message To Doctor: After selecting an appointment, you can directly message that doctor with symptoms, concerns, etc.
 
-- Update Restaurant: You can update key information about existing restaurants, such as whether they have wifi, restrooms, or power outlets.
-
-- User Messages: If you have concerns or feedback, you can use our user message form to contact us. Enter your name, email, and your message, and we'll get back to you promptly.
+- Recommendations: You can use the Appointment Notes page during appointments to write down doctor's recommendations, lifestyle changes, medication usages, etc.
 ```
 
 ## Features
 
 - Home Page/Unauthenticated page
-  -- Hero, explains what Vital is, how it works and CTAs to joing
-  Login/Register Page
+  -- Hero, explains what Vital is, how it works, and CTAs to join
+- Login/Register Page
 - Patient Portal page
   -- Main Page with all appointments and choosing departments with search bar
-  -- Patients can filter through all appointments and choose the time that is best for their schedule
+  -- Patients can filter through all appointments and choose the time/date that is best for their schedule
 - Appointment confirmation page
   -- View confirmed appointment with selected provider
   -- Patients can add messages, edit messages, or delete messages for their doctors before their visit with symptoms, concerns, and other health problems
 - Appointment Tracker Page
   -- Patients are able to keep track of their doctors’ recommendations, medication usages, and other things discussed with their doctors during their appointments
-  -- Patients can look back at these entries at any point after their appointments to keep track of the recommendations
+  -- Patients can look back at and update these entries at any point to keep track of the recommendations and can delete their notes whenever
 
 ## Configuration
 
