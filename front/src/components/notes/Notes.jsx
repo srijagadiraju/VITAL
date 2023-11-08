@@ -82,29 +82,50 @@ const handleSubmit = async (e) => {
     setPendingEntries(newPendingEntries);
   };
 
+  // const handleDelete = async (noteId) => {
+  //   console.log("Attempting to delete note with ID:", noteId);
+  //   try {
+  //     const response = await fetch(`/api/notes/${noteId}`, {
+  //       method: "DELETE",
+  //     });
+
+  //     if (response.ok) {
+  //       alert("Your appointment has been deleted.");
+  //       const newEntries = entries.filter((entry) => entry.id !== noteId);
+  //       setEntries(newEntries);
+
+  //       const newEntries = entries.filter((entry) => entry.id !== noteId);
+  //       setEntries(newEntries);
+
+  //       const newPendingEntries = pendingEntries.filter(
+  //         (entry) => entry.id !== noteId
+  //       );
+  //       setPendingEntries(newPendingEntries);
+  //     } else {
+  //       console.error("Failed to delete the note.");
+  //     }
+  //   } catch (error) {
+  //     console.error("There was an error deleting the note:", error);
+  //   }
+  // };
+
   const handleDelete = async (noteId) => {
     console.log("Attempting to delete note with ID:", noteId);
     try {
       const response = await fetch(`/api/notes/${noteId}`, {
         method: "DELETE",
       });
-
+  
       if (response.ok) {
         alert("Your appointment has been deleted.");
-<<<<<<< HEAD
-        const newEntries = entries.filter((entry) => entry.id !== noteId);
-        setEntries(newEntries);
-=======
-        // Fixing the filter condition to match the correct property
-        const newEntries = entries.filter((entry) => entry.id !== noteId);
-        setEntries(newEntries);
-
+        const updatedEntries = entries.filter((entry) => entry.id !== noteId);
+        setEntries(updatedEntries);
+  
         // Also update the pendingEntries if necessary
->>>>>>> d724bd3e6689a612b4e655ce57a3b2b89764265b
-        const newPendingEntries = pendingEntries.filter(
+        const updatedPendingEntries = pendingEntries.filter(
           (entry) => entry.id !== noteId
         );
-        setPendingEntries(newPendingEntries);
+        setPendingEntries(updatedPendingEntries);
       } else {
         console.error("Failed to delete the note.");
       }
@@ -112,16 +133,8 @@ const handleSubmit = async (e) => {
       console.error("There was an error deleting the note:", error);
     }
   };
-
-<<<<<<< HEAD
-return (
-=======
-  // need it to get the document from database rather than pending Item
-  // whatever is types is becoming a new object - want it to collect the specific element from the database
-  // buttons -- pendingItem.id
-  // .map takes in pendingItem.content
+  
   return (
->>>>>>> d724bd3e6689a612b4e655ce57a3b2b89764265b
     <div className="notes-container">
       <h2>Appointment Notes</h2>
       <div className="notes-box">
