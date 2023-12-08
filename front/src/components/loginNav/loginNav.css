@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 2rem 6rem;
 }
 
@@ -42,7 +41,6 @@
   font-size: 18px;
   line-height: 25px;
   text-transform: capitalize;
-
   margin: 0 1rem;
   cursor: pointer;
 }
@@ -60,12 +58,21 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add focus styles */
+.vital__navbar-sign button:focus,
+.vital__navbar-menu_container button:focus {
+  background: #ff4820;
+  color: #ffffff;
+  border: 2px solid #ffffff; 
+  outline: none;
 }
 
 .vital__navbar-menu {
   margin-left: 1rem;
   justify-content: flex-end;
-
   display: none;
   position: relative;
 }
@@ -79,7 +86,6 @@
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
-
   text-align: end;
   background: var(--color-footer);
   padding: 2rem;
@@ -98,6 +104,10 @@
 
 .vital__navbar-menu_container-links-sign {
   display: none;
+}
+
+.vital__navbar-menu_container-links-sign button:focus {
+  border: 2px solid #ffffff; 
 }
 
 @media screen and (max-width: 1050px) {

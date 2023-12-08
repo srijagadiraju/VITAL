@@ -134,3 +134,7 @@
     display: block;
   }
 }
+.signup-button:focus {
+  outline: 2px solid #ffffff; 
+}
+
