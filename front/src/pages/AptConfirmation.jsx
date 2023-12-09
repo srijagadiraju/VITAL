@@ -93,13 +93,13 @@ const AptConfirmation = () => {
       <CTA
         title="Update appoitment!"
         text="If you want to change your appointment details, please click update"
-        btnText="Update appoitment"
+        btnText="Update appointment"
         onClick={handleUpdateAppointment}
       />
       <CTA
         title="If you don't need your appointment anymore or you want to restart!"
-        text="Cancel appoitment and search for another"
-        btnText="Cancel appoitment"
+        text="Cancel this appointment"
+        btnText="Cancel appointment"
         onClick={handleDeleteAppointment}
       />
     </div>
