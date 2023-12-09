@@ -7,7 +7,7 @@
   padding: 2rem;
   margin: 4rem;
   border-radius: 1rem;
-  background: var(--gradient-bar);
+  background: var(--color-footer);
 }
 
 .vital__cta-content {
@@ -15,7 +15,7 @@
   flex-direction: column;
 
   text-align: left;
-  color: #fff;
+  color: ;
 }
 
 .vital__cta-content p {
@@ -23,7 +23,7 @@
   font-size: 12px;
   line-height: 30px;
   font-weight: 500;
-  color: #0e0e0e;
+  color: #fff;
 }
 
 .vital__cta-content h4 {
@@ -31,7 +31,7 @@
   font-size: 24px;
   line-height: 45px;
   font-weight: 800;
-  color: #0e0e0e;
+  color: #fff;
 }
 
 .vital__cta-btn {
