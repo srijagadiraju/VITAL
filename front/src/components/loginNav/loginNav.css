@@ -24,6 +24,7 @@
 .vital__navbar-links_container {
   display: flex;
   flex-direction: row;
+  gap: 1rem; 
 }
 
 .vital__navbar-sign {
@@ -41,7 +42,7 @@
   font-size: 18px;
   line-height: 25px;
   text-transform: capitalize;
-  margin: 0 1rem;
+  margin: 0;
   cursor: pointer;
 }
 
@@ -63,7 +64,6 @@
     border-color 0.3s ease;
 }
 
-/* Add focus styles */
 .vital__navbar-sign button:focus,
 .vital__navbar-menu_container button:focus {
   background: #ff4820;
@@ -74,9 +74,8 @@
 
 .vital__navbar-menu {
   margin-left: 1rem;
+  display: flex;
   justify-content: flex-end;
-  display: none;
-  position: relative;
 }
 
 .vital__navbar-menu svg {
@@ -112,6 +111,7 @@
   border: 2px solid #ffffff;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1050px) {
   .vital__navbar-links_container {
     display: none;
@@ -119,6 +119,11 @@
 
   .vital__navbar-menu {
     display: flex;
+  }
+
+  .vital__navbar-menu_container {
+    right: 0;
+    top: 60px;
   }
 }
 
@@ -128,21 +133,42 @@
   }
 }
 
-/* mobile - */
+/* Mobile Styles */
 @media screen and (max-width: 550px) {
   .vital__navbar {
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+
+  .vital__navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .vital__navbar-links_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
   }
 
   .vital__navbar-sign {
-    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1rem;
   }
 
   .vital__navbar-menu_container {
-    top: 20px;
+    top: 40px;
+    padding: 1.5rem;
+    min-width: 180px;
   }
 
   .vital__navbar-menu_container-links-sign {
-    display: block;
+    display: none;
+  }
+
+  .vital__navbar-menu_container p {
+    margin: 0.5rem 0;
   }
 }

@@ -1,9 +1,9 @@
-import { Navbar, Register } from "../components";
+import { RegisterNav, Register } from "../components";
 
 const RegisterPage = () => {
   return (
     <div>
-      <Navbar />
+      <RegisterNav />
       <Register />
     </div>
   );

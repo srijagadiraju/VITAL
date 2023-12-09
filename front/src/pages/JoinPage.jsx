@@ -1,9 +1,9 @@
-import { Navbar, Join } from "../components";
+import { RegisterNav, Join } from "../components";
 
 const JoinPage = () => {
   return (
     <div>
-      <Navbar />
+      <RegisterNav />
       <Join />
     </div>
   );

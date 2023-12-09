@@ -26,7 +26,7 @@ const Join = () => {
   return (
     <div className="container form-signin w-100 m-auto">
       <form action="/api/login/password" method="post">
-        <h1>Please sign in</h1>
+        <h1>Please Sign In</h1>
         <div className="form-group">
           <label htmlFor="username">Username</label>
           <input

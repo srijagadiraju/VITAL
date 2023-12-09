@@ -2,18 +2,18 @@ import PropTypes from "prop-types";
 import "./searchbar.css";
 
 const SearchBar = ({ query, setQuery }) => {
-  //const [query, setQuery] = useState("");
   const onInput = (evt) => {
     setQuery(evt.target.value);
-    console.log("Search bar on input", evt.target.value); // calls function on input
+    console.log("Search bar on input", evt.target.value);
   };
 
   return (
     <div>
-      Search:{" "}
+      <label htmlFor="searchBar">Search: </label>
       <input
-        className="input-control"
+        id="searchBar"
         type="text"
+        className="input-control"
         onInput={onInput}
         value={query}
       />
@@ -21,9 +21,11 @@ const SearchBar = ({ query, setQuery }) => {
   );
 };
 
-export default SearchBar;
-
 SearchBar.propTypes = {
   query: PropTypes.string.isRequired,
   setQuery: PropTypes.func.isRequired,
 };
+
+export default SearchBar;
+
+
