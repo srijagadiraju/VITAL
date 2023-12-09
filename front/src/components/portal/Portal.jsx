@@ -167,7 +167,7 @@
 
 // export default Portal;
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./portal.css";
 import { SearchBar } from "../../components";
@@ -178,7 +178,7 @@ const Portal = () => {
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [appointmentsPerPage] = useState(21);
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -216,67 +216,18 @@ const Portal = () => {
     ? allFilteredAppointments
     : allFilteredAppointments.slice(
         indexOfFirstAppointment,
-        indexOfLastAppointment,
+        indexOfLastAppointment
       );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // create new appointment for database
-  const createAppointment = async (appointmentDetails) => {
-    const newAppointment = {
-      aptChosen: {
-        Doctor: appointmentDetails.name,
-        Department: appointmentDetails.department,
-        Visit: appointmentDetails.visit,
-        Time: appointmentDetails.time,
-      },
-      message: "Please specify your symptoms or any message for the doctor.",
-      messaged: false,
-    };
-
-    try {
-      const response = await fetch("/api/apt/add-apt", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newAppointment),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const createdAppointment = await response.json();
-      return createdAppointment;
-    } catch (error) {
-      console.error("Error creating appointment:", error);
-      setError("Failed to create an appointment. Please try again.");
-      return null;
-    }
-  };
-
   const handleSelect = async (appointment) => {
-    setError("");
-    const createdAppointment = await createAppointment(appointment);
-    console.log("createdApt: ", createdAppointment);
-    console.log("createdApt id: ", createdAppointment?.aptId);
-    if (createdAppointment && createdAppointment.aptId) {
-      navigate(`/apt-confirmation/${createdAppointment.aptId}`);
-    } else {
-      setError(
-        "Failed to navigate to appointment confirmation. Please try again.",
-      );
-    }
+    console.log("Appointment data:", appointment);
+    navigate(`/apt-selection/`, { state: { appointment } });
   };
 
   return (
     <div className="container">
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error}
-        </div>
-      )}
       <h1>Welcome to the Appointment Portal!</h1>
       <SearchBar query={query} setQuery={setQuery} />
       <div className="row">
@@ -306,7 +257,7 @@ const Portal = () => {
         {allFilteredAppointments.length > appointmentsPerPage && (
           <ul className="pagination">
             {Array(
-              Math.ceil(allFilteredAppointments.length / appointmentsPerPage),
+              Math.ceil(allFilteredAppointments.length / appointmentsPerPage)
             )
               .fill()
               .map((_, index) => (
@@ -333,7 +284,7 @@ Portal.propTypes = {
       department: PropTypes.string.isRequired,
       visit: PropTypes.string.isRequired,
       time: PropTypes.string.isRequired,
-    }),
+    })
   ),
 };
 

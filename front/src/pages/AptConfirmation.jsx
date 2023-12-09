@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 const AptConfirmation = () => {
   const [appointment, setAppointment] = useState(null);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
-  const { aptId } = useParams(); // Assuming you're using React Router v6
+  const { aptId } = useParams();
 
   useEffect(() => {
     const fetchAppointment = async () => {
@@ -33,7 +33,7 @@ const AptConfirmation = () => {
     });
     if (response.ok) {
       // Redirect to portal page upon successful deletion
-      alert("Your appointment has been deleted.");
+      alert("Update your appointment in the portal.");
       window.location.href = "/portal";
     } else {
       // Handle the error, maybe show a message to the user

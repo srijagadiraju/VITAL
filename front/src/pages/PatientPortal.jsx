@@ -1,5 +1,4 @@
-import React from "react";
-import { LoginNav, Portal, SearchBar } from "../components";
+import { LoginNav, Portal } from "../components";
 
 const PatientPortal = () => {
   return (

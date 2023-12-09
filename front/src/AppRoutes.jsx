@@ -5,8 +5,9 @@ import {
   PatientPortal,
   AptConfirmation,
   NotesPage,
+  RegisterPage,
+  AptSelection,
 } from "./pages/index";
-import RegisterPage from "./pages/RegisterPage";
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/notes" element={<NotesPage />} />
         <Route path="/apt-confirmation/:aptId" element={<AptConfirmation />} />
+        <Route path="/apt-selection/" element={<AptSelection />} />
       </Routes>
     </Router>
   );
