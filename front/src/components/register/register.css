@@ -30,7 +30,7 @@ input[type="password"] {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #2a6624;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -40,7 +40,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: rgb(26, 73, 33);
 }
 
 .success-popup {
@@ -49,8 +49,8 @@ button:hover {
   text-align: center;
   position: fixed;
   bottom: 0;
-  left: 0; /* Set the left position to zero */
-  right: 0; /* Set the right position to zero */
+  left: 0; 
+  right: 0; 
   width: 100%;
   padding: 10px 0;
 }
