@@ -11,13 +11,13 @@ const Footer = () => {
         <div className="vital__footer-links_contact">
           <h4>Socials</h4>
           <p>
-            <a href="">Twitter</a>
+            <a href="https://twitter.com/">Twitter</a>
           </p>
           <p>
-            <a href="">LinkedIn</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
           </p>
           <p>
-            <a href="">Facebook</a>
+            <a href="https://www.facebook.com/">Facebook</a>
           </p>
         </div>
         <div className="vital__footer-links_contact">

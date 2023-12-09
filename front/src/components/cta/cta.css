@@ -15,7 +15,7 @@
   flex-direction: column;
 
   text-align: left;
-  color: ;
+  color: #fff;
 }
 
 .vital__cta-content p {
@@ -56,6 +56,10 @@
   outline: none;
   cursor: pointer;
   min-width: 150px;
+}
+
+.vital__cta-btn button:focus {
+  outline: 2px solid blue; 
 }
 
 @media screen and (max-width: 650px) {
