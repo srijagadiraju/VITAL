@@ -10,7 +10,7 @@ router.post(
   passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/login",
-  })
+  }),
 );
 
 router.get("/api/getUser", function (req, res) {
@@ -56,7 +56,7 @@ router.post("/api/signup", async function (req, res, next) {
       console.log("inserted", insertResponse);
 
       res.status(200).json({ ok: true, msg: "Signed up " });
-    }
+    },
   );
 });
 

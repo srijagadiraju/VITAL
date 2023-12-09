@@ -344,7 +344,7 @@ const Notes = () => {
 
       if (response.ok) {
         const updatedEntries = entries.map((item) =>
-          item.id === editIndex ? { ...item, content: entry } : item
+          item.id === editIndex ? { ...item, content: entry } : item,
         );
 
         setEntries(updatedEntries);
@@ -382,12 +382,10 @@ const Notes = () => {
   const handleEdit = (index) => {
     setEditIndex(index);
     setEditing(true);
-    setEntry(
-      entries.find((entry) => entry.id === index)?.content || ""
-    );
+    setEntry(entries.find((entry) => entry.id === index)?.content || "");
 
     const newPendingEntries = pendingEntries.filter(
-      (entry) => entry.id !== index
+      (entry) => entry.id !== index,
     );
     setPendingEntries(newPendingEntries);
   };
@@ -400,13 +398,11 @@ const Notes = () => {
 
       if (response.ok) {
         alert("Your note has been deleted.");
-        const updatedEntries = entries.filter(
-          (entry) => entry.id !== noteId
-        );
+        const updatedEntries = entries.filter((entry) => entry.id !== noteId);
         setEntries(updatedEntries);
 
         const updatedPendingEntries = pendingEntries.filter(
-          (entry) => entry.id !== noteId
+          (entry) => entry.id !== noteId,
         );
         setPendingEntries(updatedPendingEntries);
       } else {
@@ -427,7 +423,9 @@ const Notes = () => {
             type="text"
             value={entry}
             onChange={handleInputChange}
-            placeholder={editing ? "Enter updated text here" : "Enter text here"}
+            placeholder={
+              editing ? "Enter updated text here" : "Enter text here"
+            }
           />
           <button type="submit">{editing ? "Update" : "Enter"}</button>
         </form>
@@ -453,4 +451,3 @@ const Notes = () => {
 };
 
 export default Notes;
-

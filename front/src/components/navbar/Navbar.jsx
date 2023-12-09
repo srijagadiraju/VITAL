@@ -211,7 +211,7 @@
 //               <button
 //                 type="button"
 //                 tabIndex="0"
-//                 className="signup-button" 
+//                 className="signup-button"
 //               >
 //                 Sign up
 //               </button>
@@ -341,11 +341,7 @@ const Navbar = () => {
               <a href="#" tabIndex="0" onClick={navigateToJoin}>
                 Sign In
               </a>
-              <button
-                type="button"
-                tabIndex="0"
-                className="signup-button"
-              >
+              <button type="button" tabIndex="0" className="signup-button">
                 Sign up
               </button>
             </div>

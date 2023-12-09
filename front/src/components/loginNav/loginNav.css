@@ -58,7 +58,9 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Add focus styles */
@@ -66,7 +68,7 @@
 .vital__navbar-menu_container button:focus {
   background: #ff4820;
   color: #ffffff;
-  border: 2px solid #ffffff; 
+  border: 2px solid #ffffff;
   outline: none;
 }
 
@@ -107,7 +109,7 @@
 }
 
 .vital__navbar-menu_container-links-sign button:focus {
-  border: 2px solid #ffffff; 
+  border: 2px solid #ffffff;
 }
 
 @media screen and (max-width: 1050px) {

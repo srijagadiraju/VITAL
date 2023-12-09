@@ -216,12 +216,12 @@ const Portal = () => {
     ? allFilteredAppointments
     : allFilteredAppointments.slice(
         indexOfFirstAppointment,
-        indexOfLastAppointment
+        indexOfLastAppointment,
       );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // create new appointment for database 
+  // create new appointment for database
   const createAppointment = async (appointmentDetails) => {
     const newAppointment = {
       aptChosen: {
@@ -252,7 +252,7 @@ const Portal = () => {
     } catch (error) {
       console.error("Error creating appointment:", error);
       setError("Failed to create an appointment. Please try again.");
-      return null;  
+      return null;
     }
   };
 
@@ -305,7 +305,9 @@ const Portal = () => {
       <div>
         {allFilteredAppointments.length > appointmentsPerPage && (
           <ul className="pagination">
-            {Array(Math.ceil(allFilteredAppointments.length / appointmentsPerPage))
+            {Array(
+              Math.ceil(allFilteredAppointments.length / appointmentsPerPage),
+            )
               .fill()
               .map((_, index) => (
                 <li key={index} className="page-item">
@@ -336,4 +338,3 @@ Portal.propTypes = {
 };
 
 export default Portal;
-

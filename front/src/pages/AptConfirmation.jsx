@@ -27,6 +27,20 @@ const AptConfirmation = () => {
     return <div>Loading...</div>;
   }
 
+  const handleUpdateAppointment = async () => {
+    const response = await fetch(`/api/apt/delete-apt/${aptId}`, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      // Redirect to portal page upon successful deletion
+      alert("Your appointment has been deleted.");
+      window.location.href = "/portal";
+    } else {
+      // Handle the error, maybe show a message to the user
+      alert("Failed to delete appointment.");
+    }
+  };
+
   const handleDeleteAppointment = async () => {
     const response = await fetch(`/api/apt/delete-apt/${aptId}`, {
       method: "DELETE",
@@ -77,8 +91,14 @@ const AptConfirmation = () => {
         }}
       />
       <CTA
-        title="Cancel appoitment!"
-        text="If you don't need your appointment anymore or you want to restart"
+        title="Update appoitment!"
+        text="If you want to change your appointment details, please click update"
+        btnText="Update appoitment"
+        onClick={handleUpdateAppointment}
+      />
+      <CTA
+        title="If you don't need your appointment anymore or you want to restart!"
+        text="Cancel appoitment and search for another"
         btnText="Cancel appoitment"
         onClick={handleDeleteAppointment}
       />

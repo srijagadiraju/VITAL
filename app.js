@@ -25,7 +25,7 @@ let app = express();
 const myStrategy = new LocalStrategy(async function verify(
   username,
   password,
-  cb
+  cb,
 ) {
   try {
     const user = await myDB.getUserByUsername(username);
@@ -52,7 +52,7 @@ const myStrategy = new LocalStrategy(async function verify(
         if (
           !crypto.timingSafeEqual(
             Buffer.from(user.hashedPassword, "hex"),
-            hashedPassword
+            hashedPassword,
           )
         ) {
           console.log("passwords don't match");
@@ -66,9 +66,9 @@ const myStrategy = new LocalStrategy(async function verify(
         cb(
           null, // error
           { id: 1, username: username }, // user object
-          { message: "Hello" } // extra info
+          { message: "Hello" }, // extra info
         );
-      }
+      },
     );
   } catch (err) {
     cb(err);
@@ -88,7 +88,7 @@ app.use(
     secret: "vital session app use",
     resave: false,
     saveUninitialized: false,
-  })
+  }),
 );
 
 passport.serializeUser(function (user, cb) {
