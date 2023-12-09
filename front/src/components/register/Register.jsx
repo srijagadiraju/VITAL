@@ -75,7 +75,7 @@
 
 // export default Register;
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./register.css";
 
@@ -98,7 +98,11 @@ const Register = () => {
     e.preventDefault();
 
     // Check if all fields are filled
-    if (email.trim() === "" || username.trim() === "" || password.trim() === "") {
+    if (
+      email.trim() === "" ||
+      username.trim() === "" ||
+      password.trim() === ""
+    ) {
       alert("Please fill in all fields to register.");
     } else {
       // Simulate registration process
@@ -124,6 +128,7 @@ const Register = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email"
           />
         </div>
         <div className="form-group">
@@ -133,6 +138,7 @@ const Register = () => {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder="Enter username"
           />
         </div>
         <div className="form-group">
@@ -142,6 +148,7 @@ const Register = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter password"
           />
         </div>
         <button type="submit">Sign Up</button>

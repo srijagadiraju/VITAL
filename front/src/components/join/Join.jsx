@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./join.css";
 
@@ -24,9 +24,9 @@ const Join = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Login</h1>
-      <form>
+    <div className="container form-signin w-100 m-auto">
+      <form action="/api/login/password" method="post">
+        <h1>Please sign in</h1>
         <div className="form-group">
           <label htmlFor="username">Username</label>
           <input
@@ -34,6 +34,8 @@ const Join = () => {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder="username"
+            name="username"
           />
         </div>
         <div className="form-group">
@@ -43,6 +45,8 @@ const Join = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="password"
+            name="password"
           />
         </div>
         <button type="button" onClick={handleLogin}>
