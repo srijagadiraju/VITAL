@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import "./registerNav.css";
@@ -27,6 +27,13 @@ const Navbar = () => {
     }
   };
 
+  const handleHomeKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      navigateToHome();
+    }
+  };
+
   return (
     <div className="vital__navbar">
       <div className="vital__navbar-links">
@@ -41,6 +48,7 @@ const Navbar = () => {
                 e.preventDefault();
                 navigateToHome();
               }}
+              onKeyDown={handleHomeKeyDown} // Handle Enter key
               style={{ cursor: "pointer" }}
             >
               Home
@@ -89,7 +97,7 @@ const Navbar = () => {
           <div className="vital__navbar-menu_container scale-up-center">
             <div className="vital__navbar-menu_container-links">
               <p>
-                <a href="#home" tabIndex="0">
+                <a href="#home" tabIndex="0" onClick={navigateToHome}>
                   Home
                 </a>
               </p>
