@@ -26,9 +26,8 @@ Walkthrough Video: NEED TO ADD
 Website Link: NEED TO ADD
 
 ## Color Palette:
-<img width="1786" alt="color-palette" src="https://github.com/srijagadiraju/VITAL/assets/129122908/3b7aa9c8-0120-4021-90b0-3d4a2539f259">
+<img width="1792" alt="color-palette" src="https://github.com/srijagadiraju/VITAL/assets/129122908/25fce540-661d-44da-8882-75412a66d781">
 The rich black color is used as the application's main background for pages. Oxford blue is used for the footer, More About Us section, and the appointment selection and confirmation sections. Dartmouth green and Engineering orange are used for buttons on all the pages. Salmon is used for headers and text on various pages. 
-
 
 ## Typography Used: 
 Both are from fonts.google.com
