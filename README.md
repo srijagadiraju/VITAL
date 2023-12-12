@@ -32,6 +32,7 @@ The rich black color is used as the application's main background for pages. Oxf
 
 ## Typography Used: 
 Both are from fonts.google.com
+
 <img width="234" alt="Manrope" src="https://github.com/srijagadiraju/VITAL/assets/129122908/a625af21-9232-41d5-9887-2700cbe36c2f">
 
 <img width="238" alt="Marcellus" src="https://github.com/srijagadiraju/VITAL/assets/129122908/39b888dc-f103-4468-9ad7-f71dda9115df">
