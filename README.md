@@ -1,6 +1,17 @@
-# VITAL
+# VITAL (Final Version)
 
 VITAL is a hospital appointment scheduler for patients to be able to book appointments with providers if they are a hospital member. Patients are able to book available times, send a message to their providers before their appointment with symptoms, concerns, medications, etc., keep track of their doctor’s recommendations during their appointments, and view/edit/delete both their messages and recommendations.
+
+This is a reiteration of Project 3 (information below), with the main purpose of making our application more accessible, usable, and coherent. These are the added features to create this final version:
+- user authentication with Passport
+- using a pre-set color palette for a more unity between pages (see below)
+- an appointment selection page that allows patients to either confirm their appointment or go back to the appointment booking page
+- allowing the whole application to be used and navigated through with only the keyboard
+-  having an Accessibility score of 100 for all pages (using Lighthouse)
+-  having the whole application be responsive so that both desktop and mobile users are able to use it
+-  conducting 6 user studies (3 per member) to determine how effective and intuitive our application is (fixed the main changes they brought up)
+-  added two different typographies to our application
+-  adding a separate navbar for login/sign up pages to only allow user to navigate back to home page while unauthenticated 
 
 Created by Srija Gadiraju & Senay Tilahun
 
@@ -9,6 +20,29 @@ Design Document: [here](https://docs.google.com/document/d/1WbJf9y3eyiVDzyMLi3fp
 Slides: [here](https://docs.google.com/presentation/d/159Q970wUppgrnvJBeWqMwolbRyurYfYSv0ajo7fmWYc/edit?usp=sharing)
 
 ## Demo
+
+Walkthrough Video: NEED TO ADD
+
+Website Link: NEED TO ADD
+
+## Color Palette:
+<img width="1786" alt="color-palette" src="https://github.com/srijagadiraju/VITAL/assets/129122908/3b7aa9c8-0120-4021-90b0-3d4a2539f259">
+
+## Typography Used: 
+Both are from fonts.google.com
+<img width="234" alt="Manrope" src="https://github.com/srijagadiraju/VITAL/assets/129122908/a625af21-9232-41d5-9887-2700cbe36c2f">
+
+<img width="238" alt="Marcellus" src="https://github.com/srijagadiraju/VITAL/assets/129122908/39b888dc-f103-4468-9ad7-f71dda9115df">
+
+## Screenshots 
+
+NEED TO ADD!
+
+
+
+# VITAL (Project 3)
+
+VITAL is a hospital appointment scheduler for patients to be able to book appointments with providers if they are a hospital member. Patients are able to book available times, send a message to their providers before their appointment with symptoms, concerns, medications, etc., keep track of their doctor’s recommendations during their appointments, and view/edit/delete both their messages and recommendations.
 
 Walkthrough Video: [here](https://youtu.be/_JvaXSXABQ4)
 
