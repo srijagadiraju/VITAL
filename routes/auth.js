@@ -5,13 +5,22 @@ import myDB from "../db/userDB.js";
 
 const router = express.Router();
 
-router.post(
-  "/api/login/password",
-  passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/login",
-  }),
-);
+router.post("/api/login/password", (req, res, next) => {
+  passport.authenticate("local", (err, user, info) => {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      return res.status(401).json({ message: info.message });
+    }
+    req.logIn(user, (err) => {
+      if (err) {
+        return next(err);
+      }
+      return res.status(200).json({ message: "Logged in successfully" });
+    });
+  })(req, res, next);
+});
 
 router.get("/api/getUser", function (req, res) {
   console.log("getUser", req.user);
@@ -30,14 +39,23 @@ router.post("/api/logout", function (req, res, next) {
 router.post("/api/signup", async function (req, res, next) {
   console.log("**** signup", req.body);
 
-  const user = await myDB.getUserByUsername(req.body.username);
-  if (user) {
+  const { username, password, email } = req.body;
+
+  // Check if the user with the same username or email already exists
+  const existingUser = await myDB.getUserByUsername(username);
+  const existingEmail = await myDB.getUserByEmail(email);
+
+  if (existingUser) {
     return res.status(400).json({ ok: false, msg: "Username already exists" });
+  }
+
+  if (existingEmail) {
+    return res.status(400).json({ ok: false, msg: "Email already exists" });
   }
 
   var salt = crypto.randomBytes(16);
   crypto.pbkdf2(
-    req.body.password,
+    password,
     salt,
     310000,
     32,
@@ -47,15 +65,17 @@ router.post("/api/signup", async function (req, res, next) {
         return next(err);
       }
 
+      // Save the user with the email
       const insertResponse = await myDB.insertUser({
-        username: req.body.username,
+        email,
+        username,
         hashedPassword: hashedPassword.toString("hex"),
         salt: salt.toString("hex"),
       });
 
       console.log("inserted", insertResponse);
 
-      res.status(200).json({ ok: true, msg: "Signed up " });
+      res.status(200).json({ ok: true, msg: "Signed up successfully" });
     },
   );
 });

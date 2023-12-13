@@ -10,12 +10,29 @@ function MyMongoDB() {
     return { client, db };
   }
 
-  myDB.insertUser = async function (user) {
+  // myDB.insertUser = async function (user) {
+  //   const { client, db } = connect();
+
+  //   console.log("insert User", user.username);
+  //   try {
+  //     const response = await db.collection("users").insertOne(user);
+
+  //     return response;
+  //   } finally {
+  //     await client.close();
+  //   }
+  // };
+  myDB.insertUser = async function ({ email, username, hashedPassword, salt }) {
     const { client, db } = connect();
 
-    console.log("insert User", user.username);
+    console.log("insert User", username);
     try {
-      const response = await db.collection("users").insertOne(user);
+      const response = await db.collection("users").insertOne({
+        email,
+        username,
+        hashedPassword,
+        salt,
+      });
 
       return response;
     } finally {
@@ -33,6 +50,17 @@ function MyMongoDB() {
       await client.close();
     }
   };
+
+  myDB.getUserByEmail = async function (email) {
+    const { client, db } = connect();
+
+    try {
+      return await db.collection("users").findOne({ email });
+    } finally {
+      await client.close();
+    }
+  };
+
   return myDB;
 }
 

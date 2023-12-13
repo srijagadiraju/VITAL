@@ -25,9 +25,6 @@ const EditMessageModal = ({ isOpen, onClose, onSubmit, initialMessage }) => {
   return (
     <div className={`modal ${isOpen ? "show-modal" : ""}`} onClick={onClose}>
       <div className="modal-content" onClick={stopPropagation}>
-        {/* <span className="close-button" onClick={onClose}>
-          &times;
-        </span> */}
         <form onSubmit={handleSubmit}>
           <textarea
             ref={firstInputRef}

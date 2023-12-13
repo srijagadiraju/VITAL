@@ -17,26 +17,41 @@ const Register = () => {
     }
   }, [location]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // check if all fields are filled
     if (
       email.trim() === "" ||
       username.trim() === "" ||
       password.trim() === ""
     ) {
       alert("Please fill in all fields to register.");
-    } else {
-      // simulate registration process
-      setTimeout(() => {
-        setShowSuccess(true);
+      return;
+    }
 
-        // navigate to the join page after success
+    try {
+      const response = await fetch("/api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, username, password }),
+      });
+
+      const data = await response.json();
+      console.log("user created", data);
+
+      if (response.ok) {
+        setShowSuccess(true);
         setTimeout(() => {
           navigate("/join");
         }, 2000);
-      }, 2000);
+      } else {
+        alert(data.msg);
+      }
+    } catch (error) {
+      console.error("Error during registration:", error);
+      alert("An error occurred during registration.");
     }
   };
 

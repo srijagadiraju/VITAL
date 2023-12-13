@@ -33,10 +33,8 @@ const myStrategy = new LocalStrategy(async function verify(
     if (!user) {
       // User not found
       cb(null, false, { message: "Incorrect username or password" });
-      return false;
+      return;
     }
-
-    console.log("found user", user);
 
     // Computes the hash password from the user input
     crypto.pbkdf2(
@@ -55,19 +53,13 @@ const myStrategy = new LocalStrategy(async function verify(
             hashedPassword,
           )
         ) {
-          console.log("passwords don't match");
           // User found but password incorrect
           cb(null, false, { message: "Incorrect username or password" });
-          return false;
+          return;
         }
 
-        console.log("passwords match");
         // User found and authenticated
-        cb(
-          null, // error
-          { id: 1, username: username }, // user object
-          { message: "Hello" }, // extra info
-        );
+        cb(null, user);
       },
     );
   } catch (err) {

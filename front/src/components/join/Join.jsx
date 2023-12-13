@@ -5,17 +5,33 @@ import "./join.css";
 const Join = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [showSuccess, setShowSuccess] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     if (username.trim() === "" || password.trim() === "") {
       alert("Please fill in all fields to log in.");
-    } else {
-      setShowSuccess(true);
-      setTimeout(() => {
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/login/password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
         navigate("/portal");
-      }, 2000);
+      } else {
+        alert("Login failed. Please check your credentials.");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("An error occurred during login.");
     }
   };
 
@@ -25,7 +41,7 @@ const Join = () => {
 
   return (
     <div className="container form-signin w-100 m-auto">
-      <form action="/api/login/password" method="post">
+      <form onSubmit={handleSubmit}>
         <h1>Please Sign In</h1>
         <div className="form-group">
           <label htmlFor="username">Username</label>
@@ -49,19 +65,11 @@ const Join = () => {
             name="password"
           />
         </div>
-        <button type="button" onClick={handleLogin}>
-          Log In
-        </button>
+        <button type="submit">Log In</button>
         <button type="button" onClick={handleSignUp}>
           New User? Sign Up Here
         </button>
       </form>
-
-      {showSuccess && (
-        <div className="success-popup">
-          <p>You have successfully logged in!</p>
-        </div>
-      )}
     </div>
   );
 };
