@@ -99,7 +99,7 @@ const AptConfirmation = () => {
         onClick={handleEditButtonClick}
       />
       <CTA
-        title="Update appoitment!"
+        title="Update appointment!"
         text="If you want to change your appointment details, please click update"
         btnText="Update appointment"
         onClick={handleUpdateAppointment}
