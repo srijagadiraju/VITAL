@@ -24,9 +24,9 @@ Slides: [here](https://docs.google.com/presentation/d/159Q970wUppgrnvJBeWqMwolbR
 
 ## Demo
 
-Walkthrough Video: NEED TO ADD
+Walkthrough Video: [here](https://youtu.be/9_KItO_BuYA)
 
-Website Link: NEED TO ADD
+Website Link: [here](https://vital-final.onrender.com/)
 
 ## Color Palette:
 
