@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./portal.css";
-import { SearchBar } from "../../components" 
+import { SearchBar } from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const Portal = () => {
@@ -53,7 +53,7 @@ const Portal = () => {
 
   const handleSelect = async (appointment) => {
     console.log("Appointment data:", appointment);
-    navigate(`/apt-selection/`, { state: { appointment } });
+    navigate(`/apt-selection/`, { state: { appointment: appointment } });
   };
 
   return (
@@ -114,7 +114,6 @@ const Portal = () => {
     </div>
   );
 };
-
 
 Portal.propTypes = {
   appointments: PropTypes.arrayOf(

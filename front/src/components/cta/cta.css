@@ -26,7 +26,7 @@
   color: #fff;
 }
 
-.vital__cta-content h4 {
+.vital__cta-content h3 {
   font-family: var(--font-family-headings);
   font-size: 26px;
   line-height: 45px;
@@ -78,7 +78,7 @@
     margin: 4rem 2rem;
   }
 
-  .vital__cta-content h4 {
+  .vital__cta-content h3 {
     font-size: 18px;
     line-height: 32px;
   }

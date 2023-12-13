@@ -14,7 +14,7 @@
   margin-right: 2rem;
 }
 
-.vital__features-container__feature-title h4 {
+.vital__features-container__feature-title h2 {
   display: flex;
   font-family: var(--font-family);
   font-weight: 800;
@@ -35,7 +35,7 @@
 .vital__features-container__feature-text {
   display: flex;
   flex: 2;
-  max-width: 350px;
+  max-width: 390px;
   align-items: flex-start; 
   justify-content: flex-start;
 }
@@ -45,6 +45,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
+  
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;
@@ -53,7 +54,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .vital__features-container__feature-title h4 {
+  .vital__features-container__feature-title h2 {
     font-size: 14px;
     line-height: 22px;
   }

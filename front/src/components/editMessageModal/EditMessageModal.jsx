@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import "./editMessageModal.css";
 
 const EditMessageModal = ({ isOpen, onClose, onSubmit, initialMessage }) => {
-  console.log("EditMessageModal rendered, isOpen:", isOpen);
   const [message, setMessage] = useState(initialMessage);
+  const firstInputRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      firstInputRef.current?.focus();
+    }
+  }, [isOpen]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,11 +25,12 @@ const EditMessageModal = ({ isOpen, onClose, onSubmit, initialMessage }) => {
   return (
     <div className={`modal ${isOpen ? "show-modal" : ""}`} onClick={onClose}>
       <div className="modal-content" onClick={stopPropagation}>
-        <span className="close-button" onClick={onClose}>
+        {/* <span className="close-button" onClick={onClose}>
           &times;
-        </span>
+        </span> */}
         <form onSubmit={handleSubmit}>
           <textarea
+            ref={firstInputRef}
             id="message"
             name="message"
             placeholder="Type your message here"

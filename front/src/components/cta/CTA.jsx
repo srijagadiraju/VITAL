@@ -5,7 +5,7 @@ export default function CTA({ title, text, btnText, onClick, ariaLabelBtn }) {
   return (
     <div className="vital__cta section_padding section_margin" id="join">
       <div className="vital__cta-content">
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>{text}</p>
       </div>
       <div className="vital__cta-btn">

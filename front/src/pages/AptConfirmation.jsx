@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Confirmed from "../containers/confirmed/Confirmed";
 import { LoginNav, CTA, EditMessageModal } from "../components";
 import { useParams } from "react-router-dom";
@@ -7,6 +7,7 @@ const AptConfirmation = () => {
   const [appointment, setAppointment] = useState(null);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
   const { aptId } = useParams();
+  const editButtonRef = useRef(null);
 
   useEffect(() => {
     const fetchAppointment = async () => {
@@ -55,6 +56,15 @@ const AptConfirmation = () => {
     }
   };
 
+  const handleEditButtonClick = () => {
+    setEditModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setEditModalOpen(false);
+    editButtonRef.current?.focus();
+  };
+
   return (
     <div className="App">
       <div className="gradient__bg">
@@ -64,7 +74,7 @@ const AptConfirmation = () => {
 
       <EditMessageModal
         isOpen={isEditModalOpen}
-        onClose={() => setEditModalOpen(false)}
+        onClose={handleCloseModal} //
         initialMessage={appointment.message}
         onSubmit={async (newMessage) => {
           const response = await fetch(`/api/apt/update-apt/${aptId}`, {
@@ -82,13 +92,11 @@ const AptConfirmation = () => {
         }}
       />
       <CTA
+        ref={editButtonRef}
         title="Add a message!"
         text="Reach out to your doctor before your appointment for context"
         btnText="Add/Edit message"
-        onClick={() => {
-          console.log("CTA clicked, trying to open modal");
-          setEditModalOpen(true);
-        }}
+        onClick={handleEditButtonClick}
       />
       <CTA
         title="Update appoitment!"
