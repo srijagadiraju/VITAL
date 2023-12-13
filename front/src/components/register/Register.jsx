@@ -55,29 +55,6 @@ const Register = () => {
     }
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   // check if all fields are filled
-  //   if (
-  //     email.trim() === "" ||
-  //     username.trim() === "" ||
-  //     password.trim() === ""
-  //   ) {
-  //     alert("Please fill in all fields to register.");
-  //   } else {
-  //     // simulate registration process
-  //     setTimeout(() => {
-  //       setShowSuccess(true);
-
-  //       // navigate to the join page after success
-  //       setTimeout(() => {
-  //         navigate("/join");
-  //       }, 2000);
-  //     }, 2000);
-  //   }
-  // };
-
   return (
     <div className="container">
       <h1>Register</h1>

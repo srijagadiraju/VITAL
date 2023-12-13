@@ -43,7 +43,7 @@ Both are from fonts.google.com
 
 ## Screenshots
 
-Home Page: 
+Home Page:
 <img width="1785" alt="home" src="https://github.com/srijagadiraju/VITAL/assets/129122908/a7b66006-70a6-4989-8938-76356e9af2b8">
 <img width="1785" alt="homept2" src="https://github.com/srijagadiraju/VITAL/assets/129122908/99e71533-99f8-4d7d-b20b-72f58b71c219">
 
@@ -66,7 +66,6 @@ Appointment Confirmation Page:
 
 Notes Page:
 <img width="1788" alt="notes" src="https://github.com/srijagadiraju/VITAL/assets/129122908/d178820d-41c0-468f-901f-3a6448620340">
-
 
 # VITAL (v1.0.0)
 

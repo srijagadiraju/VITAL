@@ -25,7 +25,7 @@ let app = express();
 const myStrategy = new LocalStrategy(async function verify(
   username,
   password,
-  cb
+  cb,
 ) {
   try {
     const user = await myDB.getUserByUsername(username);
@@ -50,7 +50,7 @@ const myStrategy = new LocalStrategy(async function verify(
         if (
           !crypto.timingSafeEqual(
             Buffer.from(user.hashedPassword, "hex"),
-            hashedPassword
+            hashedPassword,
           )
         ) {
           // User found but password incorrect
@@ -60,7 +60,7 @@ const myStrategy = new LocalStrategy(async function verify(
 
         // User found and authenticated
         cb(null, user);
-      }
+      },
     );
   } catch (err) {
     cb(err);
@@ -80,7 +80,7 @@ app.use(
     secret: "vital session app use",
     resave: false,
     saveUninitialized: false,
-  })
+  }),
 );
 
 passport.serializeUser(function (user, cb) {

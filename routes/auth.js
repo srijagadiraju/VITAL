@@ -78,7 +78,7 @@ router.post("/signup", async function (req, res, next) {
       console.log("inserted", insertResponse);
 
       res.status(200).json({ ok: true, msg: "Signed up successfully" });
-    }
+    },
   );
 });
 
