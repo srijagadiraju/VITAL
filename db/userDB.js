@@ -1,3 +1,4 @@
+import "dotenv/config"; // to load .env file
 import { MongoClient } from "mongodb";
 
 function MyMongoDB() {
