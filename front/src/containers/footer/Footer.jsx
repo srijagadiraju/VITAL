@@ -9,7 +9,9 @@ const Footer = () => {
           <img src={vital} alt="vital logo" />
         </div>
         <div className="vital__footer-links_contact">
-          <p><strong>Socials</strong></p>
+          <p>
+            <strong>Socials</strong>
+          </p>
           <p>
             <a href="https://twitter.com/">Twitter</a>
           </p>
@@ -21,7 +23,9 @@ const Footer = () => {
           </p>
         </div>
         <div className="vital__footer-links_contact">
-          <p><strong>Get in touch</strong></p>
+          <p>
+            <strong>Get in touch</strong>
+          </p>
           <p>600 California Street, San Francisco, CA</p>
           <p>800-800800</p>
           <p>info@vital.com</p>

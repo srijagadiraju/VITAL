@@ -36,7 +36,7 @@
   display: flex;
   flex: 2;
   max-width: 390px;
-  align-items: flex-start; 
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
@@ -45,7 +45,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  
+
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;

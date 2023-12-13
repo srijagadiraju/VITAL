@@ -47,7 +47,7 @@ const AptSelection = () => {
       navigate(`/apt-confirmation/${createdAppointment.aptId}`);
     } else {
       console.log(
-        "Failed to navigate to appointment confirmation. Please try again."
+        "Failed to navigate to appointment confirmation. Please try again.",
       );
     }
   };

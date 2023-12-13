@@ -46,7 +46,7 @@ const Portal = () => {
     ? allFilteredAppointments
     : allFilteredAppointments.slice(
         indexOfFirstAppointment,
-        indexOfLastAppointment
+        indexOfLastAppointment,
       );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -95,7 +95,7 @@ const Portal = () => {
         {allFilteredAppointments.length > appointmentsPerPage && (
           <ul className="pagination">
             {Array(
-              Math.ceil(allFilteredAppointments.length / appointmentsPerPage)
+              Math.ceil(allFilteredAppointments.length / appointmentsPerPage),
             )
               .fill()
               .map((_, index) => (
@@ -122,7 +122,7 @@ Portal.propTypes = {
       department: PropTypes.string.isRequired,
       visit: PropTypes.string.isRequired,
       time: PropTypes.string.isRequired,
-    })
+    }),
   ),
 };
 
