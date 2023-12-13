@@ -20,15 +20,15 @@
 
 .vital__cta-content p {
   font-family: var(--font-family);
-  font-size: 12px;
+  font-size: 16px;
   line-height: 30px;
   font-weight: 500;
   color: #fff;
 }
 
 .vital__cta-content h4 {
-  font-family: var(--font-family);
-  font-size: 24px;
+  font-family: var(--font-family-headings);
+  font-size: 26px;
   line-height: 45px;
   font-weight: 800;
   color: #fff;
