@@ -7,13 +7,13 @@ const AptSelection = () => {
   const appointment = location.state?.appointment;
 
   // create new appointment for database
-  const createAppointment = async (appointmentDetails) => {
+  const createAppointment = async (appointment) => {
     const newAppointment = {
       aptChosen: {
-        Doctor: appointmentDetails.name,
-        Department: appointmentDetails.department,
-        Visit: appointmentDetails.visit,
-        Time: appointmentDetails.time,
+        Doctor: appointment.name,
+        Department: appointment.department,
+        Visit: appointment.visit,
+        Time: appointment.time,
       },
       message: "Please specify your symptoms or any message for the doctor.",
       messaged: false,
@@ -40,10 +40,9 @@ const AptSelection = () => {
     }
   };
 
-  const handleConfirm = async (appointment) => {
+  const handleConfirm = async () => {
     const createdAppointment = await createAppointment(appointment);
-    console.log("createdApt: ", createdAppointment);
-    console.log("createdApt id: ", createdAppointment?.aptId);
+
     if (createdAppointment && createdAppointment.aptId) {
       navigate(`/apt-confirmation/${createdAppointment.aptId}`);
     } else {

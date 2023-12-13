@@ -33,13 +33,18 @@
 }
 
 .vital__features-container__feature-text {
-  flex: 2;
-  max-width: 390px;
   display: flex;
+  flex: 2;
+  max-width: 350px;
+  align-items: flex-start; 
+  justify-content: flex-start;
 }
 
 .vital__features-container__feature-text p {
+  display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;
