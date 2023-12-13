@@ -2,8 +2,9 @@
 
 VITAL (Virtual Integrated Time and Appointment Liaison) is a hospital appointment scheduler for patients to be able to book appointments with providers if they are a hospital member. Patients are able to book available times, send a message to their providers before their appointment with symptoms, concerns, medications, etc., keep track of their doctor’s recommendations during their appointments, and view/edit/delete both their messages and recommendations.
 
-This is a reiteration of Project 3 (information below), with the main purpose of making our application more accessible, usable, and coherent. These are the added features to create this final version:
+This is v2.0.0 (initial release v1.0.0 information below), with the main purpose of making our application more accessible, usable, and coherent. These are the added features to create this v2.0.0 version:
 
+```
 - user authentication with Passport
 - using a pre-set color palette for a more unity between pages (see below)
 - an appointment selection page that allows patients to either confirm their appointment or go back to the appointment booking page
@@ -13,6 +14,7 @@ This is a reiteration of Project 3 (information below), with the main purpose of
 - conducting 6 user studies (3 per member) to determine how effective and intuitive our application is (fixed the main changes they brought up)
 - added two different typographies to our application
 - adding a separate navbar for login/sign up pages to only allow user to navigate back to home page while unauthenticated
+```
 
 Created by Srija Gadiraju & Senay Tilahun
 
