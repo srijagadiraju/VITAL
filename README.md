@@ -45,7 +45,7 @@ Both are from fonts.google.com
 
 NEED TO ADD!
 
-# VITAL (Project 3)
+# VITAL (v1.0.0)
 
 VITAL is a hospital appointment scheduler for patients to be able to book appointments with providers if they are a hospital member. Patients are able to book available times, send a message to their providers before their appointment with symptoms, concerns, medications, etc., keep track of their doctor’s recommendations during their appointments, and view/edit/delete both their messages and recommendations.
 
