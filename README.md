@@ -43,7 +43,30 @@ Both are from fonts.google.com
 
 ## Screenshots
 
-NEED TO ADD!
+Home Page: 
+<img width="1785" alt="home" src="https://github.com/srijagadiraju/VITAL/assets/129122908/a7b66006-70a6-4989-8938-76356e9af2b8">
+<img width="1785" alt="homept2" src="https://github.com/srijagadiraju/VITAL/assets/129122908/99e71533-99f8-4d7d-b20b-72f58b71c219">
+
+Sign Up Page:
+<img width="1790" alt="signup" src="https://github.com/srijagadiraju/VITAL/assets/129122908/ff4cfbb1-3a70-4de1-93d6-49d233b835b3">
+
+Log In Page:
+<img width="1789" alt="login" src="https://github.com/srijagadiraju/VITAL/assets/129122908/3aa82623-b6f9-430b-a7cb-7c102f767dbc">
+
+Appointment Portal Page:
+<img width="1789" alt="portal" src="https://github.com/srijagadiraju/VITAL/assets/129122908/d19ba8d1-4445-4bfe-bb86-c7619efe725a">
+<img width="1788" alt="portal2" src="https://github.com/srijagadiraju/VITAL/assets/129122908/a38086fb-3f95-45fc-942d-0397b39db737">
+
+Appointment Selection Page:
+<img width="1788" alt="selection" src="https://github.com/srijagadiraju/VITAL/assets/129122908/8fcbca63-aa3f-4276-a960-22f7f4c19d40">
+
+Appointment Confirmation Page:
+<img width="1789" alt="confirmation" src="https://github.com/srijagadiraju/VITAL/assets/129122908/77fb5a2c-f9e2-46c3-8834-7a4da543ef3f">
+<img width="1789" alt="confirmation2" src="https://github.com/srijagadiraju/VITAL/assets/129122908/eb25ec25-f2e4-45d9-a38f-e0eece4055df">
+
+Notes Page:
+<img width="1788" alt="notes" src="https://github.com/srijagadiraju/VITAL/assets/129122908/d178820d-41c0-468f-901f-3a6448620340">
+
 
 # VITAL (v1.0.0)
 
