@@ -61,6 +61,7 @@
   font-size: 34px;
   line-height: 45px;
   font-weight: 800;
+  text-align: left;
   font-family: var(--font-family);
   max-width: 510px;
 }
