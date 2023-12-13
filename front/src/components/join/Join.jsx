@@ -16,7 +16,7 @@ const Join = () => {
     }
 
     try {
-      const response = await fetch("/api/login/password", {
+      const response = await fetch("/api/auth/login/password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -6,28 +6,16 @@ function MyMongoDB() {
 
   function connect() {
     const client = new MongoClient(uri);
-    const db = client.db("appointmentSharing");
+    const db = client.db("auth");
     return { client, db };
   }
 
-  // myDB.insertUser = async function (user) {
-  //   const { client, db } = connect();
-
-  //   console.log("insert User", user.username);
-  //   try {
-  //     const response = await db.collection("users").insertOne(user);
-
-  //     return response;
-  //   } finally {
-  //     await client.close();
-  //   }
-  // };
   myDB.insertUser = async function ({ email, username, hashedPassword, salt }) {
     const { client, db } = connect();
 
     console.log("insert User", username);
     try {
-      const response = await db.collection("users").insertOne({
+      const response = await db.collection("userAuth").insertOne({
         email,
         username,
         hashedPassword,
@@ -45,7 +33,7 @@ function MyMongoDB() {
 
     console.log("get User", username);
     try {
-      return await db.collection("users").findOne({ username });
+      return await db.collection("userAuth").findOne({ username });
     } finally {
       await client.close();
     }
@@ -55,7 +43,7 @@ function MyMongoDB() {
     const { client, db } = connect();
 
     try {
-      return await db.collection("users").findOne({ email });
+      return await db.collection("userAuth").findOne({ email });
     } finally {
       await client.close();
     }

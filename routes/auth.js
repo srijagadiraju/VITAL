@@ -5,7 +5,7 @@ import myDB from "../db/userDB.js";
 
 const router = express.Router();
 
-router.post("/api/login/password", (req, res, next) => {
+router.post("/login/password", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) {
       return next(err);
@@ -36,7 +36,7 @@ router.post("/api/logout", function (req, res, next) {
   });
 });
 
-router.post("/api/signup", async function (req, res, next) {
+router.post("/signup", async function (req, res, next) {
   console.log("**** signup", req.body);
 
   const { username, password, email } = req.body;
@@ -46,10 +46,12 @@ router.post("/api/signup", async function (req, res, next) {
   const existingEmail = await myDB.getUserByEmail(email);
 
   if (existingUser) {
+    console.log("exisiting user");
     return res.status(400).json({ ok: false, msg: "Username already exists" });
   }
 
   if (existingEmail) {
+    console.log("exisiting email");
     return res.status(400).json({ ok: false, msg: "Email already exists" });
   }
 
@@ -76,7 +78,7 @@ router.post("/api/signup", async function (req, res, next) {
       console.log("inserted", insertResponse);
 
       res.status(200).json({ ok: true, msg: "Signed up successfully" });
-    },
+    }
   );
 });
 
