@@ -27,7 +27,7 @@ Slides: [here](https://docs.google.com/presentation/d/159Q970wUppgrnvJBeWqMwolbR
 Walkthrough Video: [here](https://youtu.be/9_KItO_BuYA)
 
 Website Link: [here](https://vital-final.onrender.com/)
-
+ 
 ## Color Palette:
 
 <img width="1792" alt="color-palette" src="https://github.com/srijagadiraju/VITAL/assets/129122908/25fce540-661d-44da-8882-75412a66d781">
