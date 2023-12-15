@@ -7,7 +7,7 @@ async function connect() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   return client.connect();
 }
-
+// add the catch statements to it to catch and display the errors so that it handles when it fails to interacting with the database
 async function addNote(newNote) {
   const client = await connect();
 
