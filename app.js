@@ -22,6 +22,7 @@ const __dirname = dirname(__filename);
 
 let app = express();
 
+// Move your passport initalization to the auth.js in the routes folder, or open a config folder to store it, instead of leaving it in the app.js
 const myStrategy = new LocalStrategy(async function verify(
   username,
   password,
